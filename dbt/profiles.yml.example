@@ -1,0 +1,13 @@
+barclays_payments:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      authenticator: externalbrowser
+      database: BARCLAYS_DEMO
+      warehouse: BARCLAYS_DEMO_WH
+      schema: ANALYTICS
+      role: SYSADMIN
+      threads: 4

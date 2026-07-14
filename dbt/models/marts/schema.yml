@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: mart_payment_kpis
+    description: "Daily payment KPIs by type and region"
+    columns:
+      - name: PAYMENT_DATE
+        tests:
+          - not_null
+      - name: TOTAL_PAYMENTS
+        tests:
+          - not_null
+
+  - name: mart_sla_compliance
+    description: "SLA compliance status — COMPLIANT, AT RISK, or BREACH"
+    columns:
+      - name: SLA_STATUS
+        tests:
+          - accepted_values:
+              values: ['COMPLIANT', 'AT RISK', 'BREACH']

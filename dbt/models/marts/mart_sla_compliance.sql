@@ -1,0 +1,28 @@
+WITH kpis AS (
+    SELECT * FROM {{ ref('mart_payment_kpis') }}
+),
+
+sla AS (
+    SELECT * FROM {{ source('raw', 'sla_definitions') }}
+)
+
+SELECT
+    k.PAYMENT_DATE,
+    k.PAYMENT_TYPE,
+    k.REGION,
+    k.TOTAL_PAYMENTS,
+    k.TOTAL_VOLUME,
+    k.SUCCESS_RATE_PCT,
+    k.AVG_PROCESSING_TIME_MS,
+    s.SLA_NAME,
+    s.TARGET_SUCCESS_RATE,
+    s.MAX_PROCESSING_TIME_MS AS SLA_MAX_TIME_MS,
+    CASE
+        WHEN k.SUCCESS_RATE_PCT >= s.TARGET_SUCCESS_RATE
+             AND k.AVG_PROCESSING_TIME_MS <= s.MAX_PROCESSING_TIME_MS THEN 'COMPLIANT'
+        WHEN k.SUCCESS_RATE_PCT >= (s.TARGET_SUCCESS_RATE - 1.0)
+             AND k.AVG_PROCESSING_TIME_MS <= (s.MAX_PROCESSING_TIME_MS * 1.2) THEN 'AT RISK'
+        ELSE 'BREACH'
+    END AS SLA_STATUS
+FROM kpis k
+INNER JOIN sla s ON k.PAYMENT_TYPE = s.PAYMENT_TYPE

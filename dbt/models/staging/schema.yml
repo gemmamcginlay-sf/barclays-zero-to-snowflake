@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: raw
+    database: BARCLAYS_DEMO
+    schema: RAW
+    tables:
+      - name: payments
+        description: "Raw payment transactions (50K rows)"
+      - name: customer_feedback
+        description: "Customer feedback text for Cortex AI enrichment"
+      - name: sla_definitions
+        description: "Payment SLA thresholds by type"
+      - name: operational_alerts
+        description: "Operations alerting data"
+
+models:
+  - name: stg_payments
+    description: "Cleansed and typed payment transactions"
+    columns:
+      - name: PAYMENT_ID
+        tests:
+          - not_null
+          - unique
+      - name: STATUS
+        tests:
+          - accepted_values:
+              values: ['COMPLETED', 'PENDING', 'FAILED', 'RETURNED']
+      - name: PAYMENT_TYPE
+        tests:
+          - not_null
