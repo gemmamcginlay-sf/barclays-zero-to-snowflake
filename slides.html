@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="snowflake-source" content="cortex-agent-authored" />
+  <title>Barclays Zero to Snowflake | Slides</title>
+  <script type="application/json" id="snowflake-report-metadata">
+  {
+    "generated": "2026-07-15",
+    "intent": "Presenter slide deck introducing the Barclays Zero to Snowflake demo session",
+    "sections": [
+      { "id": "slides", "title": "Slide deck", "dataSources": [], "producerNotes": "Static slides — no data queries. Update content manually." }
+    ]
+  }
+  </script>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; overflow: hidden; font-family: 'Inter', -apple-system, system-ui, sans-serif; }
+    body { background: #0f172a; color: #e2e8f0; }
+
+    .deck { height: 100%; width: 100%; position: relative; }
+    .slide { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 4rem; text-align: center; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+    .slide.active { opacity: 1; pointer-events: auto; }
+
+    h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 1rem; color: #f8fafc; }
+    h2 { font-size: 2rem; font-weight: 600; margin-bottom: 1.5rem; color: #f1f5f9; }
+    h3 { font-size: 1.2rem; font-weight: 500; color: #94a3b8; margin-bottom: 2rem; }
+    p { font-size: 1.1rem; color: #cbd5e1; max-width: 700px; line-height: 1.7; }
+    .accent { color: #29B5E8; }
+    .subtitle { color: #64748b; font-size: 1rem; margin-top: 0.5rem; }
+
+    ul { list-style: none; text-align: left; max-width: 650px; }
+    ul li { font-size: 1.15rem; color: #cbd5e1; padding: 0.6rem 0; border-bottom: 1px solid #1e293b; display: flex; align-items: center; gap: 12px; }
+    ul li::before { content: ''; width: 8px; height: 8px; background: #29B5E8; border-radius: 50%; flex-shrink: 0; }
+
+    .arch { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.85rem; color: #94a3b8; background: rgba(255,255,255,0.03); border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; white-space: pre; text-align: left; line-height: 1.6; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 800px; text-align: left; }
+    .grid-2 .card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 1.5rem; }
+    .grid-2 .card h4 { color: #29B5E8; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+    .grid-2 .card p { font-size: 0.95rem; color: #94a3b8; }
+
+    .tag { display: inline-block; background: rgba(41,181,232,0.15); color: #29B5E8; padding: 4px 14px; border-radius: 99px; font-size: 0.8rem; font-weight: 500; margin-bottom: 1.5rem; }
+
+    .progress { position: fixed; bottom: 0; left: 0; height: 3px; background: #29B5E8; transition: width 0.3s ease; z-index: 100; }
+    .slide-num { position: fixed; bottom: 16px; right: 24px; font-size: 0.75rem; color: #475569; font-family: monospace; }
+    .nav-hint { position: fixed; bottom: 16px; left: 24px; font-size: 0.7rem; color: #334155; }
+  </style>
+</head>
+<body>
+
+<div class="deck" id="slides">
+
+  <!-- Slide 1: Title -->
+  <div class="slide active">
+    <span class="tag">Barclays EDP</span>
+    <h1>Zero to <span class="accent">Snowflake</span></h1>
+    <h3>From first query to AI-powered data products</h3>
+    <p class="subtitle">Gemma McGinlay | Solutions Engineering</p>
+  </div>
+
+  <!-- Slide 2: What we'll cover -->
+  <div class="slide">
+    <h2>What we'll cover</h2>
+    <ul>
+      <li>Where Snowflake fits within EDP</li>
+      <li>Querying data — SQL, charting, Time Travel</li>
+      <li>Building pipelines — Views, Dynamic Tables, dbt, Streams, Notebooks</li>
+      <li>AI enrichment — Sentiment, Classification, LLM</li>
+      <li>Snowflake Intelligence CoWork — Agents</li>
+      <li>Streamlit — operational apps</li>
+    </ul>
+  </div>
+
+  <!-- Slide 3: EDP Architecture -->
+  <div class="slide">
+    <h2>Snowflake within <span class="accent">EDP</span></h2>
+    <div class="arch">S3 DATA LAKE (Iceberg)
+  Raw  →  Base  →  Prepared
+              |
+              v
+     SNOWFLAKE (Compute)
+  dbt | Dynamic Tables | Tasks
+  Cortex AI | Notebooks | Streamlit
+              |
+     +--------+--------+
+     v        v        v
+  Tableau  CoWork  Streamlit</div>
+  </div>
+
+  <!-- Slide 4: Key principles -->
+  <div class="slide">
+    <h2>Key Principles</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h4>Compute, not storage</h4>
+        <p>Data lives in S3 as Iceberg. Snowflake reads without moving it.</p>
+      </div>
+      <div class="card">
+        <h4>Multi-tenant</h4>
+        <p>Each BU gets isolated databases, warehouses, roles.</p>
+      </div>
+      <div class="card">
+        <h4>Pay per query</h4>
+        <p>Auto-suspend = zero idle cost. No over-provisioning.</p>
+      </div>
+      <div class="card">
+        <h4>Security first</h4>
+        <p>Tokenised before cloud. RBAC + masking policies.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 5: Demo sections -->
+  <div class="slide">
+    <h2>Demo Sections</h2>
+    <ul>
+      <li><span class="accent">1.</span> Snowsight UI orientation</li>
+      <li><span class="accent">2.</span> SQL querying + Time Travel</li>
+      <li><span class="accent">3.</span> Pipelines (6 patterns)</li>
+      <li><span class="accent">4.</span> Cortex AI enrichment</li>
+      <li><span class="accent">5.</span> Snowflake Intelligence CoWork</li>
+      <li><span class="accent">6.</span> Streamlit app</li>
+    </ul>
+  </div>
+
+  <!-- Slide 6: The data -->
+  <div class="slide">
+    <h2>The Data</h2>
+    <p>Synthetic payments dataset modelled on CDS Transaction Lineage:</p>
+    <div class="grid-2" style="margin-top:1.5rem;">
+      <div class="card">
+        <h4>50,000 Payments</h4>
+        <p>SWIFT, BACS, CHAPS, Faster Payments, SEPA — 12 months</p>
+      </div>
+      <div class="card">
+        <h4>2,000 Feedback</h4>
+        <p>Customer feedback text for AI enrichment</p>
+      </div>
+      <div class="card">
+        <h4>5 SLA Definitions</h4>
+        <p>Processing time and success rate thresholds</p>
+      </div>
+      <div class="card">
+        <h4>1,500 Alerts</h4>
+        <p>Operational alerts for LLM-generated actions</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 7: Let's go -->
+  <div class="slide">
+    <span class="tag">Live Demo</span>
+    <h1>Let's <span class="accent">build</span>.</h1>
+    <h3>Switching to Snowsight...</h3>
+  </div>
+
+</div>
+
+<div class="progress" id="progress"></div>
+<div class="slide-num" id="slideNum"></div>
+<div class="nav-hint">Arrow keys or click to navigate</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function show(n) {
+    slides[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    document.getElementById('progress').style.width = ((current / (slides.length - 1)) * 100) + '%';
+    document.getElementById('slideNum').textContent = (current + 1) + ' / ' + slides.length;
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'ArrowDown') { e.preventDefault(); show(current + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); show(current - 1); }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (e.clientX > window.innerWidth / 2) show(current + 1);
+    else show(current - 1);
+  });
+
+  show(0);
+</script>
+</body>
+</html>
