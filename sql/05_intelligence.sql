@@ -1,6 +1,6 @@
 -- =====================================================
 -- BARCLAYS ZERO TO SNOWFLAKE
--- STEP 5: SNOWFLAKE INTELLIGENCE (Semantic View + Agent)
+-- STEP 5: SNOWFLAKE INTELLIGENCE CoWork (Agent Demo)
 -- Duration: ~15 minutes
 -- Pre-req: dbt marts deployed (Step 3c)
 -- =====================================================
@@ -31,27 +31,31 @@ SELECT * FROM V_PAYMENTS_ANALYSIS LIMIT 5;
 
 
 -- =====================================================
--- SNOWSIGHT UI STEPS (no SQL required):
+-- SNOWSIGHT UI STEPS (pre-demo setup):
 --
--- CREATE SEMANTIC VIEW:
---   Data → Databases → BARCLAYS_DEMO → ANALYTICS → Views
---   → V_PAYMENTS_ANALYSIS → ... → Create Semantic View
---   OR: AI & ML → Analyst → Semantic Views → Create with Autopilot
---   Name: SV_PAYMENTS_BARCLAYS  |  Schema: ANALYTICS
+-- 1. CREATE SEMANTIC VIEW:
+--    AI & ML → Analyst → Semantic Views → Create with Autopilot
+--    Source: V_PAYMENTS_ANALYSIS  |  Name: SV_PAYMENTS_BARCLAYS
 --
--- CREATE CORTEX AGENT:
---   AI & ML → Agents
---   Name: BARCLAYS_PAYMENTS_AGENT
---   + Query Structured Data → Add Semantic View → SV_PAYMENTS_BARCLAYS
+-- 2. CREATE CORTEX AGENT:
+--    AI & ML → Agents → Create Agent
+--    Name: BARCLAYS_PAYMENTS_AGENT
+--    + Query Structured Data → Add Semantic View → SV_PAYMENTS_BARCLAYS
 --
--- SAMPLE QUESTIONS TO TRY:
---   "What is the total payment volume this month?"
---   "Which payment type has the lowest success rate?"
---   "Show the trend of CHAPS payments by week"
---   "What is the average processing time for Faster Payments?"
---   "Compare success rates across regions"
---   "Which region has the most failed transactions?"
---   "Show me daily volumes for SWIFT vs BACS"
+-- 3. DEMO IN CoWork:
+--    Open CoWork → select BARCLAYS_PAYMENTS_AGENT → ask questions:
+--
+--    "What is the total payment volume this month?"
+--    "Which payment type has the lowest success rate?"
+--    "Drill into the SWIFT failures — which region is worst?"
+--    "Show the trend of CHAPS payments by week"
+--    "Why might APAC have lower success rates?"
+--    "Compare success rates across all regions and summarise"
+--
+-- KEY MESSAGE:
+-- "Same data we've been querying all session — now accessible to
+--  anyone via a conversation. No SQL required. The Agent maintains
+--  context, so you can drill down and ask follow-ups naturally."
 -- =====================================================
 
 -- 5.2: After creating Semantic View, verify it exists

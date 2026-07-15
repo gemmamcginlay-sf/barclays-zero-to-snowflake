@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barclays Zero to Snowflake</title>
+    <title>Barclays Zero to Snowflake | Demo Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -44,22 +44,17 @@ nav a:hover { color: var(--sf-blue); }
 .card-head .dur { font-size: 0.75rem; color: var(--g500); }
 .card-body { padding: 1.5rem; }
 
-.tp { display: flex; gap: 10px; padding: 10px 14px; background: var(--sf-blue-light); border-left: 3px solid var(--sf-blue); border-radius: 6px; margin: 12px 0; font-size: 0.9rem; }
-.tp::before { content: '\1F4AC'; flex-shrink: 0; }
+.say { display: flex; gap: 10px; padding: 10px 14px; background: var(--sf-blue-light); border-left: 3px solid var(--sf-blue); border-radius: 6px; margin: 12px 0; font-size: 0.9rem; font-style: italic; color: var(--g700); }
+.say::before { content: '\1F4AC'; flex-shrink: 0; font-style: normal; }
+
+.do { display: flex; gap: 10px; padding: 10px 14px; background: #f0fff0; border-left: 3px solid var(--sf-green); border-radius: 6px; margin: 12px 0; font-size: 0.9rem; color: var(--g700); }
+.do::before { content: '\25B6'; color: var(--sf-green); font-weight: 700; flex-shrink: 0; }
 
 .takeaway { display: flex; gap: 10px; padding: 10px 14px; background: #f0f7ff; border-left: 3px solid var(--sf-blue-dark); border-radius: 6px; margin: 12px 0; font-size: 0.85rem; color: var(--g700); }
 .takeaway::before { content: '\2714'; color: var(--sf-blue-dark); font-weight: 700; flex-shrink: 0; }
 
 .demo h3 { font-size: 0.95rem; font-weight: 600; color: var(--g700); margin: 1.25rem 0 0.5rem; }
 .demo p { color: var(--g600); font-size: 0.9rem; margin-bottom: 0.5rem; }
-
-.code { background: var(--g900); border-radius: 8px; margin: 10px 0; overflow: hidden; }
-.code-top { display: flex; justify-content: space-between; align-items: center; padding: 6px 12px; background: var(--g800); }
-.code-top span { color: var(--g400); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; }
-.code-top button { background: transparent; border: 1px solid var(--g600); color: var(--g400); padding: 2px 8px; border-radius: 3px; font-size: 0.65rem; cursor: pointer; }
-.code-top button:hover { background: var(--g700); color: white; }
-.code pre { margin: 0; padding: 1rem; overflow-x: auto; }
-.code code { font-family: var(--mono); font-size: 0.8rem; line-height: 1.5; color: var(--g100); white-space: pre; }
 
 .note { display: flex; gap: 10px; padding: 12px 14px; border-radius: 8px; margin: 14px 0; font-size: 0.875rem; }
 .note-info { background: var(--sf-blue-light); border-left: 3px solid var(--sf-blue); }
@@ -74,6 +69,7 @@ td { padding: 8px 12px; border-bottom: 1px solid var(--g100); }
 .time { font-family: var(--mono); font-size: 0.8rem; background: var(--g100); padding: 2px 6px; border-radius: 3px; }
 
 .transition { text-align: center; padding: 1rem; color: var(--g400); font-style: italic; font-size: 0.8rem; border-top: 1px dashed var(--g200); margin-top: 1.5rem; }
+.file-ref { font-family: var(--mono); font-size: 0.75rem; background: var(--g100); padding: 2px 8px; border-radius: 4px; color: var(--g600); }
 
 @media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; } .arch-box { display: none; } }
 @media print { .header { position: static; } .card { break-inside: avoid; } }
@@ -84,7 +80,7 @@ td { padding: 8px 12px; border-bottom: 1px solid var(--g100); }
 <header class="header">
     <div class="logo-area">
         <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#29B5E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span class="badge">Zero to Snowflake</span>
+        <span class="badge">Demo Guide</span>
     </div>
     <nav>
         <a href="#agenda">Agenda</a>
@@ -93,7 +89,7 @@ td { padding: 8px 12px; border-bottom: 1px solid var(--g100); }
         <a href="#s3">SQL</a>
         <a href="#s4">Pipelines</a>
         <a href="#s5">AI</a>
-        <a href="#s6">Intelligence</a>
+        <a href="#s6">CoWork</a>
         <a href="#s7">Apps</a>
     </nav>
 </header>
@@ -103,33 +99,30 @@ td { padding: 8px 12px; border-bottom: 1px solid var(--g100); }
         <div>
             <span class="hero-tag">Barclays Enterprise Data Platform</span>
             <h1>Zero to Snowflake</h1>
-            <p>A comprehensive walkthrough of Snowflake within the Barclays EDP. From first query to AI-powered data products — everything in one session.</p>
+            <p>Presenter's demo guide. From first query to AI-powered data products &mdash; the full Snowflake story within Barclays EDP.</p>
             <div class="hero-meta">
                 <span>~90 minutes</span>
-                <span>Instructor-led</span>
+                <span>Instructor-led demo</span>
                 <span>All levels</span>
             </div>
         </div>
-        <div class="arch-box">
-&#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;
-&#9474;     S3 DATA LAKE (EDP)        &#9474;
-&#9474;   Raw &#8594; Staging &#8594; Analytics    &#9474;
-&#9492;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9516;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;
-               &#9474; Iceberg
-&#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9660;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;
-&#9474;     SNOWFLAKE (Compute)       &#9474;
-&#9474;  dbt &#183; Dynamic Tables &#183; Tasks &#9474;
-&#9474;  Cortex AI &#183; Streamlit       &#9474;
-&#9492;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9516;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;
-               &#9474;
-   &#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9532;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;
-   &#9660;           &#9660;           &#9660;
-Tableau    Agents/CoWork  Streamlit</div>
+        <div class="arch-box">S3 DATA LAKE (EDP)
+  Raw &rarr; Staging &rarr; Analytics
+         |  Iceberg
+         v
+SNOWFLAKE (Compute)
+  dbt | Dynamic Tables | Tasks
+  Cortex AI | Streamlit
+         |
+   +-----+-----+
+   v     v     v
+Tableau CoWork Streamlit</div>
     </div>
 </section>
 
 <div class="wrap">
 
+    <!-- Agenda -->
     <div id="agenda" class="card">
         <div class="card-head">
             <div class="num" style="background:var(--g700)">A</div>
@@ -137,18 +130,19 @@ Tableau    Agents/CoWork  Streamlit</div>
         </div>
         <div class="card-body">
             <table>
-                <thead><tr><th>Time</th><th>Topic</th><th>Format</th></tr></thead>
+                <thead><tr><th>Time</th><th>Section</th><th>Format</th></tr></thead>
                 <tbody>
                     <tr><td><span class="time">0:00</span></td><td><strong>Snowflake at Barclays</strong> &mdash; EDP context</td><td>Verbal</td></tr>
                     <tr><td><span class="time">0:05</span></td><td><strong>Navigating Snowsight</strong> &mdash; UI tour</td><td>Live UI</td></tr>
                     <tr><td><span class="time">0:10</span></td><td><strong>Querying Data</strong> &mdash; SQL, charting, Time Travel</td><td>Live SQL</td></tr>
                     <tr><td><span class="time">0:22</span></td><td><strong>Pipelines</strong> &mdash; Views, DTs, dbt, Streams+Tasks</td><td>Live SQL</td></tr>
                     <tr><td><span class="time">0:47</span></td><td><strong>Cortex AI</strong> &mdash; Sentiment, Classification, LLM</td><td>Live SQL</td></tr>
-                    <tr><td><span class="time">0:67</span></td><td><strong>Snowflake Intelligence</strong> &mdash; Semantic View + Agent</td><td>UI + Demo</td></tr>
+                    <tr><td><span class="time">0:67</span></td><td><strong>Snowflake Intelligence CoWork</strong> &mdash; Semantic View + Agent</td><td>Live UI + chat</td></tr>
                     <tr><td><span class="time">0:82</span></td><td><strong>Streamlit App</strong> &mdash; Payments Health Monitor</td><td>Live demo</td></tr>
                     <tr><td><span class="time">0:87</span></td><td><strong>Wrap-up &amp; Q&amp;A</strong></td><td>Discussion</td></tr>
                 </tbody>
             </table>
+            <div class="note note-info"><div>&#128196;</div><div><strong>SQL scripts:</strong><p>All SQL is in the repo under <span class="file-ref">sql/</span>. Open the relevant worksheet in Snowsight before each section.</p></div></div>
         </div>
     </div>
 
@@ -159,16 +153,15 @@ Tableau    Agents/CoWork  Streamlit</div>
             <div><h2>Snowflake at Barclays</h2><div class="dur">5 min &mdash; verbal</div></div>
         </div>
         <div class="card-body">
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>What this covers:</strong> Where Snowflake sits within the Barclays technology landscape. No SQL &mdash; just context so everything that follows makes sense.</p>
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>Why it matters:</strong> Snowflake is a <em>compute engine</em> within EDP, not a data lake or separate copy of data. Your data already exists in S3 as Iceberg &mdash; Snowflake gives you a powerful way to query and transform it without moving it.</p>
-            <div class="tp">Snowflake is a compute engine within EDP. Your data lives in S3 as Iceberg tables. Snowflake reads it without moving it.</div>
+            <div class="say">Snowflake is a compute engine within EDP. Your data lives in S3 as Iceberg. Snowflake reads it without moving it.</div>
             <ul style="margin:0.75rem 0 0 1.25rem; color:var(--g600); font-size:0.9rem;">
                 <li>EDP architecture: S3 &rarr; Iceberg &rarr; Snowflake (compute) &rarr; Consumers</li>
-                <li>Multi-tenant: each BU has isolated databases, warehouses, roles</li>
+                <li>Multi-tenant: each BU gets isolated databases, warehouses, roles</li>
                 <li>Pay only when queries run &mdash; auto-suspend = zero idle cost</li>
-                <li>Approved patterns: dbt, Dynamic Tables, Tasks, Cortex AI</li>
+                <li>Approved patterns: dbt, Dynamic Tables, Tasks, Cortex AI, Streamlit</li>
             </ul>
-            <div class="transition">"Let me show you the UI..."</div>
+            <div class="takeaway">Snowflake is not a data lake and not a separate copy of data. It's compute that sits on top of what already exists in S3.</div>
+            <div class="transition">"Let me show you what this looks like..."</div>
         </div>
     </div>
 
@@ -179,16 +172,13 @@ Tableau    Agents/CoWork  Streamlit</div>
             <div><h2>Navigating Snowsight</h2><div class="dur">5 min &mdash; live UI</div></div>
         </div>
         <div class="card-body">
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>What this covers:</strong> A live walk-through of the Snowsight web interface &mdash; the browser-based IDE where you write queries, explore data, and monitor workloads.</p>
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>Why it matters:</strong> No installation required. If you have a browser and the right AD group, you're set up. This builds familiarity so you can self-serve after the session.</p>
-            <div class="tp">No installation. Just a browser. Everything maps to your granted roles.</div>
-            <ul style="margin:0.75rem 0 0 1.25rem; color:var(--g600); font-size:0.9rem;">
-                <li><strong>Object browser:</strong> BARCLAYS_DEMO &rarr; RAW / STAGING / ANALYTICS / PREPARED</li>
-                <li><strong>Data preview:</strong> Click PAYMENTS &mdash; see columns, sample rows</li>
-                <li><strong>Worksheets:</strong> Autocomplete, keyboard shortcuts, shareable</li>
-                <li><strong>Warehouses:</strong> BARCLAYS_DEMO_WH &mdash; auto-suspend, sizing, state</li>
-                <li><strong>Query History:</strong> Who ran what, when, how long, how much</li>
-            </ul>
+            <div class="say">No installation. Just a browser. Everything maps to your granted roles.</div>
+            <div class="do">Object browser &rarr; BARCLAYS_DEMO &rarr; show RAW / STAGING / ANALYTICS / PREPARED schemas</div>
+            <div class="do">Click PAYMENTS table &rarr; show columns and data preview</div>
+            <div class="do">Open a worksheet &rarr; show autocomplete</div>
+            <div class="do">Warehouses &rarr; BARCLAYS_DEMO_WH &rarr; show auto-suspend, sizing</div>
+            <div class="do">Query History &rarr; show who ran what, cost per query</div>
+            <div class="takeaway">If you have a browser and the right AD group, you can self-serve immediately. No installs, no tickets for access to your own data.</div>
             <div class="transition">"Let's run some queries..."</div>
         </div>
     </div>
@@ -200,61 +190,39 @@ Tableau    Agents/CoWork  Streamlit</div>
             <div><h2>Querying Data</h2><div class="dur">12 min &mdash; live SQL</div></div>
         </div>
         <div class="card-body">
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>What this covers:</strong> Hands-on SQL &mdash; from simple selects through aggregations, window functions, instant charting, and Time Travel.</p>
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>Why it matters:</strong> If you already write SQL, you can be productive in Snowflake immediately. No new language. Time Travel eliminates the need for manual backups or restore tickets.</p>
+            <p style="color:var(--g500); font-size:0.8rem; margin-bottom:1rem;"><span class="file-ref">sql/02_querying.sql</span></p>
+            <div class="say">If you know SQL, you know Snowflake. Standard ANSI SQL. Let me prove it.</div>
 
             <div class="demo">
                 <h3>3a. Explore</h3>
-                <div class="code"><div class="code-top"><span>sql</span><button onclick="copyCode(this)">Copy</button></div><pre><code>SELECT * FROM PAYMENTS LIMIT 10;</code></pre></div>
-                <div class="takeaway">Browse and preview any table you have access to &mdash; no exports, no tickets.</div>
+                <div class="do">Run SELECT * FROM PAYMENTS LIMIT 10 &mdash; show the data structure</div>
+                <div class="takeaway">Browse any table you have access to. No exports, no waiting.</div>
             </div>
 
             <div class="demo">
                 <h3>3b. Aggregate + Chart</h3>
-                <div class="code"><div class="code-top"><span>sql</span><button onclick="copyCode(this)">Copy</button></div><pre><code>SELECT
-    PAYMENT_TYPE,
-    COUNT(*) AS TXN_COUNT,
-    SUM(AMOUNT) AS TOTAL_VALUE,
-    COUNT(CASE WHEN STATUS = 'FAILED' THEN 1 END) AS FAILED,
-    ROUND(AVG(PROCESSING_TIME_MS), 0) AS AVG_MS
-FROM PAYMENTS
-GROUP BY PAYMENT_TYPE
-ORDER BY TOTAL_VALUE DESC;</code></pre></div>
-                <p style="font-size:0.85rem; color:var(--g500);">Click "Chart" tab &rarr; instant bar chart</p>
-                <div class="takeaway">Standard GROUP BY &mdash; same SQL you'd write anywhere. Built-in charting removes the need to export to Excel for a quick visual.</div>
+                <div class="do">Run the GROUP BY PAYMENT_TYPE query &mdash; show results</div>
+                <div class="do">Click the "Chart" tab &mdash; instant bar chart without Excel</div>
+                <div class="takeaway">Standard GROUP BY. Same SQL you'd write in Teradata. Built-in charting for quick visuals.</div>
             </div>
 
             <div class="demo">
                 <h3>3c. Window function</h3>
-                <div class="code"><div class="code-top"><span>sql</span><button onclick="copyCode(this)">Copy</button></div><pre><code>SELECT
-    PAYMENT_DATE::DATE AS DAY,
-    SUM(AMOUNT) AS DAILY_VALUE,
-    SUM(SUM(AMOUNT)) OVER (ORDER BY PAYMENT_DATE::DATE) AS RUNNING_TOTAL
-FROM PAYMENTS
-WHERE STATUS = 'COMPLETED'
-GROUP BY DAY ORDER BY DAY;</code></pre></div>
-                <div class="takeaway">Window functions work identically to Teradata/Oracle/SQL Server. Running totals, rankings, and moving averages are all single-query operations.</div>
+                <div class="do">Run the running total query (SUM OVER ORDER BY)</div>
+                <div class="say">If you've used window functions in Teradata or Oracle &mdash; identical syntax here.</div>
+                <div class="takeaway">All ANSI window functions work. Running totals, rankings, moving averages &mdash; single query.</div>
             </div>
 
             <div class="demo">
                 <h3>3d. Time Travel</h3>
-                <div class="code"><div class="code-top"><span>sql</span><button onclick="copyCode(this)">Copy</button></div><pre><code>-- Make a change
-UPDATE PAYMENTS SET STATUS = 'CANCELLED'
-WHERE STATUS = 'PENDING' AND AMOUNT &lt; 1000;
-
--- Query 30 seconds ago (talk while waiting)
-SELECT STATUS, COUNT(*)
-FROM PAYMENTS AT(OFFSET =&gt; -30)
-GROUP BY STATUS ORDER BY COUNT(*) DESC;
-
--- Undo instantly
-CREATE TABLE PAYMENTS_RESTORED CLONE PAYMENTS AT(OFFSET =&gt; -60);
-ALTER TABLE PAYMENTS SWAP WITH PAYMENTS_RESTORED;
-DROP TABLE PAYMENTS_RESTORED;</code></pre></div>
-                <div class="takeaway">Snowflake retains historical versions automatically. Query any point in time (up to 90 days) and restore instantly &mdash; no support ticket needed.</div>
+                <div class="do">Run the UPDATE (change PENDING rows to CANCELLED)</div>
+                <div class="say">Talk for 30 seconds &mdash; explain what just happened, build suspense</div>
+                <div class="do">Query AT(OFFSET =&gt; -30) &mdash; show the data BEFORE the change</div>
+                <div class="do">Clone + Swap to undo &mdash; show CANCELLED is gone</div>
+                <div class="takeaway">Snowflake retains history automatically. Query any point in time, undo mistakes instantly. No backups, no support tickets.</div>
             </div>
 
-            <div class="transition">"Now let's build pipelines..."</div>
+            <div class="transition">"Now let's build pipelines on top of this data..."</div>
         </div>
     </div>
 
@@ -265,94 +233,51 @@ DROP TABLE PAYMENTS_RESTORED;</code></pre></div>
             <div><h2>Pipelines</h2><div class="dur">25 min &mdash; live SQL + dbt</div></div>
         </div>
         <div class="card-body">
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>What this covers:</strong> Five transformation patterns &mdash; Views, Dynamic Tables, dbt, Streams+Tasks, and Stored Procedures. Each with a real example.</p>
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>Why it matters:</strong> Most teams quickly need repeatable pipelines. This section gives you the full menu so you pick the right tool for each job, aligned with EDP standards.</p>
-
-            <div class="note note-info"><div>&#8505;&#65039;</div><div><strong>EDP Principle #11:</strong><p>dbt is the strategic transformation framework. Dynamic Tables, Tasks, and Stored Procedures are all supported.</p></div></div>
+            <p style="color:var(--g500); font-size:0.8rem; margin-bottom:1rem;"><span class="file-ref">sql/03_pipelines.sql</span></p>
+            <div class="say">Five transformation patterns. Think of this as the menu &mdash; pick the right tool for each job.</div>
+            <div class="note note-info"><div>&#8505;&#65039;</div><div><strong>EDP Principle #11:</strong><p>dbt is the strategic standard. Dynamic Tables, Tasks, and Procedures are all supported.</p></div></div>
 
             <div class="demo">
-                <h3>4a. Views &mdash; always-current logical layer</h3>
-                <div class="code"><div class="code-top"><span>sql</span><button onclick="copyCode(this)">Copy</button></div><pre><code>CREATE OR REPLACE VIEW STAGING.PAYMENTS_CLEANSED AS
-SELECT *,
-    PAYMENT_DATE::DATE AS PAYMENT_DAY,
-    CASE WHEN AMOUNT &lt; 5000 THEN 'RETAIL'
-         WHEN AMOUNT &lt; 100000 THEN 'CORPORATE'
-         ELSE 'LARGE VALUE' END AS VALUE_BAND
-FROM RAW.PAYMENTS;</code></pre></div>
-                <div class="takeaway">Views add business logic without storing a copy. Consumers always see the latest data. Zero cost.</div>
+                <h3>4a. Views &mdash; logical layer</h3>
+                <div class="do">Create the STAGING.PAYMENTS_CLEANSED view &mdash; adds VALUE_BAND classification</div>
+                <div class="do">Query it to show RETAIL vs CORPORATE vs LARGE VALUE breakdown</div>
+                <div class="takeaway">Views add business logic without storing a copy. Always fresh. Zero cost. This is your STAGING layer.</div>
             </div>
 
             <div class="demo">
-                <h3>4b. Dynamic Tables &mdash; auto-refreshing materialisation</h3>
-                <div class="code"><div class="code-top"><span>sql</span><button onclick="copyCode(this)">Copy</button></div><pre><code>CREATE OR REPLACE DYNAMIC TABLE PREPARED.DAILY_SUMMARY
-    TARGET_LAG = '1 hour'
-    WAREHOUSE = BARCLAYS_DEMO_WH
-AS
-SELECT PAYMENT_DAY, PAYMENT_TYPE, REGION,
-    COUNT(*) AS TXN_COUNT,
-    SUM(AMOUNT) AS TOTAL_VALUE,
-    ROUND(100.0 * COUNT(CASE WHEN STATUS='FAILED' THEN 1 END) / COUNT(*), 2) AS FAIL_RATE_PCT
-FROM STAGING.PAYMENTS_CLEANSED
-GROUP BY PAYMENT_DAY, PAYMENT_TYPE, REGION;</code></pre></div>
-                <div class="takeaway">Declare WHAT, not WHEN. Snowflake refreshes automatically when source changes. Ideal for dashboards and operational summaries.</div>
+                <h3>4b. Dynamic Tables &mdash; auto-refreshing</h3>
+                <div class="do">Create PREPARED.DAILY_SUMMARY with TARGET_LAG = '1 hour'</div>
+                <div class="do">Query it immediately &mdash; show pre-aggregated daily KPIs</div>
+                <div class="say">Declare WHAT you want, not WHEN to refresh. Snowflake handles the scheduling.</div>
+                <div class="takeaway">Materialised results that stay fresh automatically. Ideal for dashboards and operational summaries.</div>
             </div>
 
             <div class="demo">
-                <h3>4c. dbt &mdash; version-controlled SQL (EDP standard)</h3>
-                <div class="note note-tip"><div>&#128256;</div><div><strong>Live switch:</strong><p>Open the dbt project in Snowsight or Cortex Code to walk through.</p></div></div>
-                <p><strong>Demo flow:</strong></p>
-                <ul style="margin:0.5rem 0 1rem 1.25rem; color:var(--g600); font-size:0.9rem;">
-                    <li><strong>DAG:</strong> source &rarr; stg_payments &rarr; mart_payment_kpis / mart_sla_compliance</li>
-                    <li><strong>Tests:</strong> not_null, unique, accepted_values for SLA_STATUS</li>
-                    <li><strong>Build:</strong> Trigger a run &mdash; show results, timing</li>
-                </ul>
-                <div class="takeaway">dbt wraps SQL in version control, testing, and documentation. The EDP-approved standard for repeatable transformations.</div>
+                <h3>4c. dbt &mdash; version-controlled pipelines</h3>
+                <div class="do">Show the dbt project structure in Snowsight (or Cortex Code)</div>
+                <div class="do">Walk through: source &rarr; stg_payments &rarr; mart_payment_kpis &rarr; mart_sla_compliance</div>
+                <div class="do">Show schema.yml tests: not_null, unique, accepted_values</div>
+                <div class="do">Query the built marts &mdash; show KPIs and SLA compliance (COMPLIANT / AT RISK / BREACH)</div>
+                <div class="say">Same SQL we've been writing. dbt adds version control, testing, docs, and lineage.</div>
+                <div class="takeaway">dbt is the EDP standard for repeatable transformations. Code-reviewed, tested, traceable &mdash; not scripts on someone's laptop.</div>
             </div>
 
             <div class="demo">
                 <h3>4d. Streams + Tasks &mdash; event-driven (live demo)</h3>
-                <p style="color:var(--g600); font-size:0.9rem; margin-bottom:0.75rem;">Full lifecycle: create the pipeline, simulate data arriving, watch the stream capture it, fire the task, prove the data updated.</p>
-                <div class="code"><div class="code-top"><span>sql &mdash; 6 steps</span><button onclick="copyCode(this)">Copy</button></div><pre><code>-- Step 1: Baseline
-SELECT STATUS, COUNT(*) FROM RAW.PAYMENTS GROUP BY STATUS;
-
--- Step 2: Create Stream + Task
-CREATE OR REPLACE STREAM RAW.STATUS_STREAM ON TABLE RAW.PAYMENT_STATUS_UPDATES;
-CREATE OR REPLACE TASK RAW.APPLY_UPDATES
-    WAREHOUSE = BARCLAYS_DEMO_WH  SCHEDULE = '5 MINUTE'
-    WHEN SYSTEM$STREAM_HAS_DATA('RAW.STATUS_STREAM')
-AS MERGE INTO RAW.PAYMENTS t USING RAW.STATUS_STREAM s
-   ON t.PAYMENT_ID = s.PAYMENT_ID
-   WHEN MATCHED THEN UPDATE SET t.STATUS = s.NEW_STATUS;
-
--- Step 3: Simulate data arriving
-INSERT INTO RAW.PAYMENT_STATUS_UPDATES (PAYMENT_ID, NEW_STATUS, REASON)
-SELECT PAYMENT_ID, 'COMPLETED', 'Cleared by beneficiary bank'
-FROM RAW.PAYMENTS WHERE STATUS = 'PENDING' LIMIT 5;
-
--- Step 4: Stream captured it
-SELECT PAYMENT_ID, NEW_STATUS, METADATA$ACTION FROM RAW.STATUS_STREAM;
-
--- Step 5: Fire the Task
-EXECUTE TASK RAW.APPLY_UPDATES;
-
--- Step 6: Prove it worked
-SELECT STATUS, COUNT(*) FROM RAW.PAYMENTS GROUP BY STATUS;</code></pre></div>
-                <div class="takeaway">Event-driven pipeline in 4 SQL statements. No Airflow, no Lambda, no polling &mdash; zero cost when no data arrives.</div>
+                <div class="do">Step 1: Show baseline PENDING count</div>
+                <div class="do">Step 2: Create Stream + Task</div>
+                <div class="do">Step 3: INSERT 5 rows into PAYMENT_STATUS_UPDATES (simulate upstream)</div>
+                <div class="do">Step 4: Query the Stream &mdash; show METADATA$ACTION (built-in CDC)</div>
+                <div class="do">Step 5: EXECUTE TASK &mdash; fire it manually</div>
+                <div class="do">Step 6: Show stream is empty, PENDING dropped by 5</div>
+                <div class="say">No Kafka, no Debezium, no Airflow. Event-driven in 4 SQL statements. Zero cost when no data.</div>
+                <div class="takeaway">Streams capture changes automatically. Tasks fire only when data exists. The full event-driven pipeline without external tools.</div>
             </div>
 
             <div class="demo">
                 <h3>4e. Stored Procedures &mdash; control flow</h3>
-                <div class="code"><div class="code-top"><span>sql</span><button onclick="copyCode(this)">Copy</button></div><pre><code>CREATE OR REPLACE PROCEDURE PREPARED.FLAG_AGED_FAILURES()
-    RETURNS VARCHAR LANGUAGE SQL EXECUTE AS CALLER
-AS BEGIN
-    LET cnt INTEGER := 0;
-    SELECT COUNT(*) INTO :cnt FROM RAW.PAYMENTS
-    WHERE STATUS = 'FAILED' AND PAYMENT_DATE &lt; DATEADD(HOUR, -24, CURRENT_TIMESTAMP());
-    IF (:cnt &gt; 0) THEN RETURN :cnt || ' aged failures &mdash; flag for review';
-    ELSE RETURN 'All clear'; END IF;
-END;
-CALL PREPARED.FLAG_AGED_FAILURES();</code></pre></div>
-                <div class="takeaway">Stored Procedures handle branching, loops, and error handling. Useful for operational processes and conditional pipeline routing.</div>
+                <div class="do">Create and CALL FLAG_AGED_FAILURES() &mdash; show IF/ELSE logic returning a count</div>
+                <div class="takeaway">For logic that needs branching, loops, or error handling. Supports SQL, Python, Java, JavaScript.</div>
             </div>
 
             <div class="transition">"Now the exciting part &mdash; AI built into the platform..."</div>
@@ -366,57 +291,40 @@ CALL PREPARED.FLAG_AGED_FAILURES();</code></pre></div>
             <div><h2>Cortex AI Enrichment</h2><div class="dur">20 min &mdash; live SQL</div></div>
         </div>
         <div class="card-body">
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>What this covers:</strong> AI functions built directly into SQL &mdash; sentiment analysis, text classification, and LLM-generated recommendations. Plus AI-powered Dynamic Tables that refresh automatically.</p>
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>Why it matters:</strong> No separate ML platform, no data movement, no model training. One function call on any text column. Same RBAC, same audit trail.</p>
-
-            <div class="note note-info"><div>&#128274;</div><div><strong>Security:</strong><p>All Cortex AI runs inside Snowflake. Data never leaves the platform.</p></div></div>
+            <p style="color:var(--g500); font-size:0.8rem; margin-bottom:1rem;"><span class="file-ref">sql/04_cortex_ai.sql</span></p>
+            <div class="say">AI functions built directly into SQL. No separate ML platform, no data movement, no model training.</div>
+            <div class="note note-info"><div>&#128274;</div><div><strong>Security:</strong><p>All Cortex AI runs inside Snowflake. Data never leaves. Same RBAC, same audit trail.</p></div></div>
 
             <div class="demo">
                 <h3>5a. Sentiment Analysis</h3>
-                <div class="code"><div class="code-top"><span>sql</span><button onclick="copyCode(this)">Copy</button></div><pre><code>SELECT
-    LEFT(FEEDBACK_TEXT, 80) || '...' AS PREVIEW,
-    ROUND(SNOWFLAKE.CORTEX.SENTIMENT(FEEDBACK_TEXT), 3) AS SCORE,
-    CASE WHEN SNOWFLAKE.CORTEX.SENTIMENT(FEEDBACK_TEXT) > 0.3 THEN 'POSITIVE'
-         WHEN SNOWFLAKE.CORTEX.SENTIMENT(FEEDBACK_TEXT) < -0.3 THEN 'NEGATIVE'
-         ELSE 'NEUTRAL' END AS LABEL
-FROM RAW.CUSTOMER_FEEDBACK
-ORDER BY SCORE LIMIT 10;</code></pre></div>
-                <div class="takeaway">One function call scores any text from -1 (negative) to +1 (positive). No model training, no external APIs.</div>
+                <div class="do">Run SENTIMENT() on customer feedback &mdash; show scores from -1 to +1</div>
+                <div class="say">One function call on any text column. No model training. No external APIs.</div>
+                <div class="takeaway">Instant sentiment scoring on any text. The function runs where the data lives.</div>
             </div>
 
             <div class="demo">
                 <h3>5b. Text Classification</h3>
-                <div class="code"><div class="code-top"><span>sql</span><button onclick="copyCode(this)">Copy</button></div><pre><code>SELECT
-    FEEDBACK_TEXT,
-    SNOWFLAKE.CORTEX.CLASSIFY_TEXT(FEEDBACK_TEXT,
-        ['Performance Issue','Service Quality','Technical Problem',
-         'Positive Experience','Feature Request']
-    ):label::STRING AS TOPIC
-FROM RAW.CUSTOMER_FEEDBACK LIMIT 5;</code></pre></div>
-                <div class="takeaway">Classify any text into your own categories &mdash; no training data needed. Define the labels, Cortex does the rest.</div>
+                <div class="do">Run CLASSIFY_TEXT() with custom categories &mdash; show topic assignment</div>
+                <div class="say">Define your own categories. No training data needed. Cortex does the rest.</div>
+                <div class="takeaway">Classify any text into business-relevant categories. You define the labels.</div>
             </div>
 
             <div class="demo">
                 <h3>5c. LLM-Generated Actions</h3>
-                <div class="code"><div class="code-top"><span>sql</span><button onclick="copyCode(this)">Copy</button></div><pre><code>SELECT ALERT_ID, SEVERITY, ALERT_DESCRIPTION,
-    SNOWFLAKE.CORTEX.COMPLETE('mistral-large2',
-        'You are a payments ops analyst. Given alert: "' ||
-        ALERT_DESCRIPTION || '" severity: ' || SEVERITY ||
-        '. One-sentence recommended action.'
-    ) AS AI_ACTION
-FROM RAW.OPERATIONAL_ALERTS
-WHERE STATUS = 'OPEN' AND SEVERITY IN ('HIGH','CRITICAL')
-LIMIT 5;</code></pre></div>
-                <div class="takeaway">Any LLM, directly in SQL. Context-aware recommendations generated per row. Swap models with one word.</div>
+                <div class="do">Run COMPLETE() on open alerts &mdash; show one-sentence recommended actions</div>
+                <div class="say">Any LLM, directly in SQL. Context-aware recommendations per row. Swap models with one word.</div>
+                <div class="takeaway">LLMs as SQL functions. Generate text, summarise, recommend &mdash; all within governed queries.</div>
             </div>
 
             <div class="demo">
                 <h3>5d. AI-Powered Dynamic Tables</h3>
-                <p style="color:var(--g600); font-size:0.9rem;">After enriching the data, create auto-refreshing Dynamic Tables that surface negative sentiment feeds and SLA breach counters in real time.</p>
-                <div class="takeaway">AI enrichment + Dynamic Tables = an operational intelligence layer that stays fresh automatically. Surface issues before anyone asks.</div>
+                <div class="do">Create DT_NEGATIVE_SENTIMENT_FEED and DT_SENTIMENT_OPS_SUMMARY</div>
+                <div class="do">Query them &mdash; show negative feedback feed refreshing automatically</div>
+                <div class="say">AI enrichment plus Dynamic Tables = operational intelligence that stays fresh without anyone running a job.</div>
+                <div class="takeaway">Surface issues before anyone asks. Auto-refreshing AI insights as a pipeline, not a one-off query.</div>
             </div>
 
-            <div class="transition">"Now let's make this accessible to everyone..."</div>
+            <div class="transition">"Now let's make this accessible to everyone &mdash; no SQL required..."</div>
         </div>
     </div>
 
@@ -424,36 +332,45 @@ LIMIT 5;</code></pre></div>
     <div id="s6" class="card">
         <div class="card-head">
             <div class="num">6</div>
-            <div><h2>Snowflake Intelligence</h2><div class="dur">15 min &mdash; UI + demo</div></div>
+            <div><h2>Snowflake Intelligence CoWork</h2><div class="dur">15 min &mdash; live UI + chat</div></div>
         </div>
         <div class="card-body">
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>What this covers:</strong> Semantic Views (business-language definitions over your data) and Cortex Agents (conversational analytics). Created via UI, demoed live.</p>
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>Why it matters:</strong> Lowers the barrier from "must know SQL" to "must know what question to ask". Business users get verified, governed answers in natural language.</p>
+            <p style="color:var(--g500); font-size:0.8rem; margin-bottom:1rem;"><span class="file-ref">sql/05_intelligence.sql</span> (for the analytics view)</p>
+            <div class="say">Everything we've built so far requires SQL. What about people who don't write SQL? That's what CoWork solves.</div>
 
             <div class="demo">
-                <h3>6a. Cortex Analyst &mdash; Natural Language to SQL</h3>
-                <p><strong>[Create Semantic View over V_PAYMENTS_ANALYSIS, then ask questions]</strong></p>
-                <ul style="margin:0.75rem 0 0 1.25rem; color:var(--g600); font-size:0.9rem;">
-                    <li>"What is the total payment volume this month?"</li>
-                    <li>"Which payment type has the lowest success rate?"</li>
-                    <li>"Show the trend of CHAPS payments by week"</li>
-                    <li>"Compare success rates across regions"</li>
-                </ul>
-                <div class="takeaway">Business users ask questions in plain English, get verified SQL and results. The Semantic View ensures correct, governed queries &mdash; not hallucinated ones.</div>
+                <h3>6a. Create the Semantic View (live)</h3>
+                <div class="do">AI &amp; ML &rarr; Analyst &rarr; Semantic Views &rarr; Create with Autopilot</div>
+                <div class="do">Select V_PAYMENTS_ANALYSIS as the source</div>
+                <div class="do">Name it SV_PAYMENTS_BARCLAYS &mdash; let Autopilot generate the definitions</div>
+                <div class="do">Review the generated metrics and dimensions &mdash; show how business language maps to columns</div>
+                <div class="say">The Semantic View defines trusted business definitions. This is what ensures the AI generates correct queries, not hallucinated ones.</div>
+                <div class="takeaway">Semantic Views are the governance layer for AI. They define what "total volume" or "success rate" means so every answer is consistent.</div>
             </div>
 
             <div class="demo">
-                <h3>6b. Cortex Agent &mdash; Conversational Analytics</h3>
-                <p><strong>[Create Agent with Semantic View, then demonstrate follow-up questions]</strong></p>
-                <ul style="margin:0.75rem 0 0 1.25rem; color:var(--g600); font-size:0.9rem;">
-                    <li>Ask follow-ups: "drill into the SWIFT failures"</li>
-                    <li>Combine context: "why might APAC have lower success rates?"</li>
-                    <li>Multi-step: "show me the trend, then summarise the insight"</li>
-                </ul>
-                <div class="takeaway">Agents go beyond single questions &mdash; they maintain context across a conversation. Not just Q&amp;A, but an ongoing dialogue with your data.</div>
+                <h3>6b. Create the Agent (live)</h3>
+                <div class="do">AI &amp; ML &rarr; Agents &rarr; Create Agent</div>
+                <div class="do">Name: BARCLAYS_PAYMENTS_AGENT</div>
+                <div class="do">Add tool: Query Structured Data &rarr; select SV_PAYMENTS_BARCLAYS</div>
+                <div class="do">Save &mdash; show how quick it is to go from data to conversational interface</div>
+                <div class="say">That's it. A conversational analytics agent over your payments data. Built in 60 seconds.</div>
+                <div class="takeaway">Creating an Agent takes seconds. It combines the Semantic View with conversational AI &mdash; no code, no deployment.</div>
             </div>
 
-            <div class="transition">"One more thing &mdash; building apps on top of all this..."</div>
+            <div class="demo">
+                <h3>6c. Live Agent Demo &mdash; Conversational Analytics</h3>
+                <div class="do">Open CoWork &rarr; select BARCLAYS_PAYMENTS_AGENT</div>
+                <div class="do">Ask: "What is the total payment volume this month?"</div>
+                <div class="do">Follow up: "Which payment type has the lowest success rate?"</div>
+                <div class="do">Drill down: "Show me the SWIFT failures by region"</div>
+                <div class="do">Trend: "Show the trend of CHAPS payments by week"</div>
+                <div class="do">Reasoning: "Why might APAC have lower success rates?"</div>
+                <div class="say">Same data we've been querying all session. Now accessible to anyone via a conversation.</div>
+                <div class="takeaway">Agents maintain context across a conversation. Follow-ups, drill-downs, reasoning &mdash; all governed by the Semantic View. This is Snowflake Intelligence.</div>
+            </div>
+
+            <div class="transition">"One last thing &mdash; building apps on top of all this..."</div>
         </div>
     </div>
 
@@ -464,34 +381,19 @@ LIMIT 5;</code></pre></div>
             <div><h2>Streamlit App</h2><div class="dur">5 min &mdash; live demo</div></div>
         </div>
         <div class="card-body">
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>What this covers:</strong> Streamlit in Snowflake &mdash; interactive data applications in Python, running natively inside Snowflake with no separate infrastructure.</p>
-            <p style="color:var(--g600); font-size:0.9rem; margin-bottom:1rem;"><strong>Why it matters:</strong> Not everyone wants a SQL worksheet or BI tool. Streamlit lets you build custom dashboards and operational tools that sit on top of the data you've just been querying &mdash; governed, no servers, no data extraction.</p>
+            <div class="say">Not everyone wants a conversation or a BI tool. Sometimes you need a custom operational dashboard. Streamlit does that in Python &mdash; no frontend framework, no servers.</div>
 
             <div class="demo">
                 <h3>Payments Health Monitor</h3>
-                <p style="color:var(--g600); font-size:0.9rem;">A dark-themed operational dashboard querying the Dynamic Tables we built in Sections 4 and 5. Filters, KPI cards, failure rate charts, volume bars, and AI sentiment breakdown &mdash; all in ~100 lines of Python.</p>
-                <div class="code"><div class="code-top"><span>python</span><button onclick="copyCode(this)">Copy</button></div><pre><code>import streamlit as st
-from snowflake.snowpark.context import get_active_session
-
-session = get_active_session()
-st.title("Barclays Payments Health Monitor")
-
-df = session.sql("""
-    SELECT PAYMENT_DAY, PAYMENT_TYPE, TXN_COUNT, TOTAL_VALUE, FAIL_RATE_PCT
-    FROM PREPARED.DAILY_SUMMARY
-    ORDER BY PAYMENT_DAY DESC LIMIT 60
-""").to_pandas()
-
-col1, col2, col3 = st.columns(3)
-col1.metric("Transactions", f"{df['TXN_COUNT'].sum():,}")
-col2.metric("Value", f"&pound;{df['TOTAL_VALUE'].sum():,.0f}")
-col3.metric("Fail Rate", f"{df['FAIL_RATE_PCT'].mean():.1f}%")
-
-st.line_chart(df, x="PAYMENT_DAY", y="FAIL_RATE_PCT")</code></pre></div>
-                <div class="takeaway">Full circle: RAW &rarr; View &rarr; Dynamic Table &rarr; Streamlit app. All governed, all inside Snowflake, shareable like any other object.</div>
+                <div class="do">Open the Streamlit app in Snowsight (Projects &rarr; Streamlit &rarr; PAYMENTS_HEALTH_MONITOR)</div>
+                <div class="do">Show: KPI cards, failure rate chart, volume bars, sentiment donut</div>
+                <div class="do">Use the filters &mdash; change payment type, adjust date range</div>
+                <div class="do">Click Edit &mdash; show it's ~100 lines of Python querying the same Dynamic Tables</div>
+                <div class="say">Full circle: RAW &rarr; View &rarr; Dynamic Table &rarr; dbt mart &rarr; AI enrichment &rarr; Streamlit app. All governed, all inside Snowflake.</div>
+                <div class="takeaway">Streamlit fills the gap between "I have data" and "I have an app". Custom tools, operational dashboards, internal portals &mdash; no infrastructure needed.</div>
             </div>
 
-            <div class="transition">"That's the full journey &mdash; let's wrap up..."</div>
+            <div class="transition">"That's the full journey. Let's wrap up..."</div>
         </div>
     </div>
 
@@ -506,7 +408,8 @@ st.line_chart(df, x="PAYMENT_DAY", y="FAIL_RATE_PCT")</code></pre></div>
                 <li>Everything shown runs in <strong>your environment today</strong></li>
                 <li>Snowflake = compute within EDP &mdash; data stays in S3/Iceberg</li>
                 <li>dbt + Dynamic Tables + Cortex AI = a complete data product stack</li>
-                <li>Cortex Analyst + Agents = self-service analytics for business users</li>
+                <li>Snowflake Intelligence CoWork = self-service for business users</li>
+                <li>Streamlit = custom apps without infrastructure</li>
             </ul>
             <table style="margin-top:1rem;">
                 <tbody>
@@ -520,15 +423,5 @@ st.line_chart(df, x="PAYMENT_DAY", y="FAIL_RATE_PCT")</code></pre></div>
     </div>
 
 </div>
-
-<script>
-function copyCode(btn) {
-    const code = btn.closest('.code').querySelector('code').textContent;
-    navigator.clipboard.writeText(code).then(() => {
-        btn.textContent = 'Copied!';
-        setTimeout(() => btn.textContent = 'Copy', 1500);
-    });
-}
-</script>
 </body>
 </html>

@@ -19,7 +19,7 @@ A modular demo covering Snowflake within the Barclays Enterprise Data Platform (
 | 3 | Querying Data | 12 min | SQL, charting, Time Travel |
 | 4 | Pipelines | 25 min | Views, Dynamic Tables, dbt, Streams+Tasks, Procedures |
 | 5 | Cortex AI | 20 min | Sentiment, classification, LLM, AI Dynamic Tables |
-| 6 | Snowflake Intelligence | 15 min | Semantic View + Agent |
+| 6 | Snowflake Intelligence CoWork | 15 min | Agent demo (conversational analytics) |
 | 7 | Streamlit Apps | 5 min | Payments Health Monitor |
 
 ## Quick Start
