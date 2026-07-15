@@ -1,0 +1,6 @@
+name: payments_analysis
+channels:
+  - snowflake
+dependencies:
+  - altair
+  - pandas
