@@ -3,9 +3,9 @@ barclays_payments:
   outputs:
     dev:
       type: snowflake
-      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('SNOWFLAKE_USER') }}"
-      authenticator: externalbrowser
+      account: KM09008
+      user: GMCGINLAY
+      authenticator: snowflake
       database: BARCLAYS_DEMO
       warehouse: BARCLAYS_DEMO_WH
       schema: ANALYTICS
