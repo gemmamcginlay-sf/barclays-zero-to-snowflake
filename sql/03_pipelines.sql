@@ -116,32 +116,29 @@ FROM RAW.PAYMENTS GROUP BY STATUS ORDER BY TXN_COUNT DESC;
 
 -- ─── 3e. NOTEBOOKS ─── (Python + SQL together, deployable)
 -- Pre-built notebook: notebook/payments_operations_analysis.ipynb
--- Import into Snowsight: Projects → Notebooks → Import
--- Run on: BARCLAYS_DEMO_NOTEBOOK_POOL (container runtime — full pip, any package)
 --
--- WHY CONTAINER RUNTIME?
--- Workspace notebooks on warehouse runtime have limited packages (pandas, matplotlib only).
--- Container runtime gives you: pip install, altair, plotly, scikit-learn, torch, etc.
--- Cold start ~30s, but full Python ecosystem available.
+-- OPEN VIA: Workspace → navigate to notebook/ folder → click .ipynb file
+-- Runs on Container Runtime (BARCLAYS_DEMO_NOTEBOOK_POOL) — full pip, any package
 --
--- NOTEBOOK CONTENTS (5 analysis sections):
--- 1. SQL: Payment volume by type & status
--- 2. Python: Failure rate pivot table (Pandas)
--- 3. SQL + Python: Daily failure trend → Altair line chart
--- 4. Python: Failure rate bar chart by payment type
--- 5. SQL + Python: Processing time P50 vs P95 → grouped bar chart
+-- NOTEBOOK CONTENTS (7 cells):
+-- 1. Install: pip install altair matplotlib (runs in seconds on container runtime)
+-- 2. Setup: get_active_session(), USE DATABASE/SCHEMA/WAREHOUSE
+-- 3. Payment volume by type & status → DataFrame
+-- 4. Failure rate pivot table (Pandas)
+-- 5. Daily failure trend → Altair interactive line chart
+-- 6. Failure rate by payment type → Altair bar chart (red = >15%)
+-- 7. Processing time P50 vs P95 → Altair grouped bar chart
 --
 -- DEMO FLOW:
--- 1. Import or open the notebook
--- 2. Run cells top-to-bottom — show SQL results flowing into Python charts
--- 3. Point out: Python cells reference SQL cell results by NAME (e.g. payment_volume.to_pandas())
+-- 1. Open notebook from Workspace file browser
+-- 2. Run cells top-to-bottom — show pip install, then SQL→Python→Chart flow
+-- 3. Point out: session.sql().to_pandas() pattern — queries run on warehouse, analysis in Python
 -- 4. Show deployment: Click "Schedule" → daily cadence → assign warehouse
 -- 5. Explain: "This notebook is now a scheduled job. Same governance as Tasks."
 --
 -- KEY MESSAGE:
--- "Notebooks bridge SQL and Python. Use them when you need data science
---  logic alongside SQL transforms. And they deploy as scheduled pipelines
---  — not just for exploration."
+-- "Notebooks bridge SQL and Python in a single governed environment.
+--  Container Runtime gives full pip access. Deploy as scheduled pipelines."
 
 
 -- ─── 3f. STORED PROCEDURES ─── (control flow, IF/ELSE)

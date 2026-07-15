@@ -278,15 +278,17 @@ Tableau CoWork Streamlit</div>
             <div class="demo">
                 <h3>4e. Notebooks &mdash; Python + SQL together</h3>
                 <p style="color:var(--g500); font-size:0.8rem; margin-bottom:0.5rem;"><span class="file-ref">notebook/payments_operations_analysis.ipynb</span></p>
-                <div class="do">Open Snowsight &rarr; Projects &rarr; Legacy Notebooks &rarr; Import the .ipynb from the repo</div>
-                <div class="do">Run Cell 1: Setup &mdash; connects to BARCLAYS_DEMO.RAW</div>
-                <div class="do">Run Cell 2 (Python): Converts SQL output to Pandas, computes failure rates &mdash; show the pivot table</div>
-                <div class="do">Run Cell 3 (SQL + Python): Daily failure trend query feeds into an Altair line chart &mdash; show the red trend line</div>
-                <div class="do">Run Cell 4 (Python): Bar chart comparing failure rates across SWIFT/BACS/CHAPS &mdash; highlight which types are worst</div>
-                <div class="do">Run Cell 5 (SQL + Python): Processing time percentiles (P50 vs P95) as grouped bars &mdash; show latency differences</div>
-                <div class="say">SQL and Python in the same document. Each cell runs on Snowflake compute &mdash; no data download, no local setup. The Python cells reference SQL cell results by name.</div>
+                <div class="do">Open your Workspace &rarr; navigate to the notebook/payments_operations_analysis.ipynb file &rarr; click to open as a Notebook</div>
+                <div class="say">This runs on Container Runtime &mdash; full Python ecosystem, pip install anything. No data leaves Snowflake.</div>
+                <div class="do">Run Cell 1 (Install): installs altair + matplotlib via pip &mdash; show that packages install in seconds on container runtime</div>
+                <div class="do">Run Cell 2 (Setup): connects session to BARCLAYS_DEMO.RAW</div>
+                <div class="do">Run Cell 3 (Python): Payment volume by type &amp; status &mdash; show the DataFrame output</div>
+                <div class="do">Run Cell 4 (Python): Failure rate pivot table &mdash; point out pandas transforms happening server-side</div>
+                <div class="do">Run Cell 5 (Altair chart): Daily failure trend as interactive line chart &mdash; hover over points to show tooltips</div>
+                <div class="do">Run Cell 6 (Altair chart): Failure rate by payment type bar chart &mdash; red bars flag types above 15%</div>
+                <div class="do">Run Cell 7 (Altair chart): Processing time P50 vs P95 grouped bars &mdash; show latency differences</div>
                 <div class="do">Show deployment: click Schedule &rarr; set to daily &rarr; assign warehouse &mdash; notebook becomes a scheduled job</div>
-                <div class="takeaway">Notebooks bridge SQL and Python in a single governed environment. Deploy them as scheduled jobs for pipelines that need data science logic alongside SQL transforms.</div>
+                <div class="takeaway">Notebooks bridge SQL and Python in a single governed environment. Run on Container Runtime for full pip access. Deploy as scheduled jobs for pipelines that need data science logic alongside SQL transforms.</div>
             </div>
 
             <div class="demo">
