@@ -44,4 +44,11 @@ USE SCHEMA RAW;
 -- Verify Cortex AI is available
 SELECT SNOWFLAKE.CORTEX.SENTIMENT('Payment processed successfully') AS CORTEX_TEST;
 
+-- Create compute pool for Notebooks (container runtime — full pip, any package)
+CREATE COMPUTE POOL IF NOT EXISTS BARCLAYS_DEMO_NOTEBOOK_POOL
+    MIN_NODES = 1 MAX_NODES = 1
+    INSTANCE_FAMILY = CPU_X64_XS
+    AUTO_SUSPEND_SECS = 300
+    COMMENT = 'Container runtime for Notebooks — enables pip install, altair, ML libs';
+
 SELECT 'Setup complete' AS STATUS;

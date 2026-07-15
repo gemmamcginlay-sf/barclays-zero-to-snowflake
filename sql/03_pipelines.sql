@@ -117,6 +117,12 @@ FROM RAW.PAYMENTS GROUP BY STATUS ORDER BY TXN_COUNT DESC;
 -- ─── 3e. NOTEBOOKS ─── (Python + SQL together, deployable)
 -- Pre-built notebook: notebook/payments_operations_analysis.ipynb
 -- Import into Snowsight: Projects → Notebooks → Import
+-- Run on: BARCLAYS_DEMO_NOTEBOOK_POOL (container runtime — full pip, any package)
+--
+-- WHY CONTAINER RUNTIME?
+-- Workspace notebooks on warehouse runtime have limited packages (pandas, matplotlib only).
+-- Container runtime gives you: pip install, altair, plotly, scikit-learn, torch, etc.
+-- Cold start ~30s, but full Python ecosystem available.
 --
 -- NOTEBOOK CONTENTS (5 analysis sections):
 -- 1. SQL: Payment volume by type & status
