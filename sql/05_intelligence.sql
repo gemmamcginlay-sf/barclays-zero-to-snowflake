@@ -97,7 +97,7 @@ CREATE OR REPLACE AGENT BARCLAYS_DEMO.ANALYTICS.BARCLAYS_PAYMENTS_AGENT
   FROM SPECIFICATION
   $$
   models:
-    orchestration: claude-3-5-sonnet
+    orchestration: claude-sonnet-4-5
 
   instructions:
     response: "You are a payments operations analyst for Barclays. Answer questions about payment volumes, success rates, processing times, and trends. Always be specific about time periods and payment types. If asked about failures, proactively suggest which regions or types to investigate."
