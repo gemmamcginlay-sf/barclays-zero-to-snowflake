@@ -115,6 +115,9 @@ CREATE OR REPLACE AGENT BARCLAYS_DEMO.ANALYTICS.BARCLAYS_PAYMENTS_AGENT
   tool_resources:
     PaymentsAnalyst:
       semantic_view: "BARCLAYS_DEMO.ANALYTICS.SV_PAYMENTS_BARCLAYS"
+      execution_environment:
+        type: "warehouse"
+        warehouse: "BARCLAYS_DEMO_WH"
   $$;
 
 
