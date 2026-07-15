@@ -30,7 +30,7 @@ st.caption("Real-time operational dashboard — powered by Dynamic Tables and Co
 # Filters
 col_f1, col_f2 = st.columns(2)
 with col_f1:
-    payment_types = session.sql("SELECT DISTINCT PAYMENT_TYPE FROM PREPARED.DAILY_SUMMARY ORDER BY 1").to_pandas()
+    payment_types = session.sql("SELECT DISTINCT PAYMENT_TYPE FROM BARCLAYS_DEMO.PREPARED.DAILY_SUMMARY ORDER BY 1").to_pandas()
     selected_type = st.selectbox("Payment Type", ["ALL"] + payment_types["PAYMENT_TYPE"].tolist())
 with col_f2:
     days_back = st.slider("Days to show", min_value=7, max_value=365, value=60)
@@ -39,8 +39,8 @@ with col_f2:
 where_clause = f"AND PAYMENT_TYPE = '{selected_type}'" if selected_type != "ALL" else ""
 df = session.sql(f"""
     SELECT PAYMENT_DAY, PAYMENT_TYPE, REGION, TXN_COUNT, TOTAL_VALUE, FAIL_RATE_PCT, AVG_PROCESSING_MS
-    FROM PREPARED.DAILY_SUMMARY
-    WHERE PAYMENT_DAY >= DATEADD(DAY, -{days_back}, (SELECT MAX(PAYMENT_DAY) FROM PREPARED.DAILY_SUMMARY))
+    FROM BARCLAYS_DEMO.PREPARED.DAILY_SUMMARY
+    WHERE PAYMENT_DAY >= DATEADD(DAY, -{days_back}, (SELECT MAX(PAYMENT_DAY) FROM BARCLAYS_DEMO.PREPARED.DAILY_SUMMARY))
     {where_clause}
     ORDER BY PAYMENT_DAY
 """).to_pandas()
@@ -86,7 +86,7 @@ if not df.empty:
     # Sentiment Summary (from AI Dynamic Table)
     st.subheader("Sentiment by Payment Type (AI-Enriched)")
     try:
-        sentiment_df = session.sql("SELECT * FROM PREPARED.DT_SENTIMENT_OPS_SUMMARY ORDER BY NEGATIVE_PCT DESC").to_pandas()
+        sentiment_df = session.sql("SELECT * FROM BARCLAYS_DEMO.PREPARED.DT_SENTIMENT_OPS_SUMMARY ORDER BY NEGATIVE_PCT DESC").to_pandas()
         if not sentiment_df.empty:
             donut = alt.Chart(sentiment_df).mark_arc(innerRadius=50, outerRadius=100).encode(
                 theta=alt.Theta("NEGATIVE_COUNT:Q"),
@@ -106,4 +106,4 @@ else:
     st.warning("No data for the selected filters.")
 
 st.divider()
-st.caption("Data sources: PREPARED.DAILY_SUMMARY + PREPARED.DT_SENTIMENT_OPS_SUMMARY (Dynamic Tables)")
+st.caption("Data sources: BARCLAYS_DEMO.PREPARED.DAILY_SUMMARY + BARCLAYS_DEMO.PREPARED.DT_SENTIMENT_OPS_SUMMARY (Dynamic Tables)")
