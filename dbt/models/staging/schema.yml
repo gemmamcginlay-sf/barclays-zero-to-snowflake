@@ -25,7 +25,7 @@ models:
       - name: STATUS
         tests:
           - accepted_values:
-              values: ['COMPLETED', 'PENDING', 'FAILED', 'RETURNED']
+              values: ['COMPLETED', 'PENDING', 'FAILED', 'RETURNED', 'CANCELLED']
       - name: PAYMENT_TYPE
         tests:
           - not_null
