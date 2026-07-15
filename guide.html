@@ -356,23 +356,21 @@ Tableau CoWork Streamlit</div>
             <div class="say">Everything we've built so far requires SQL. What about people who don't write SQL? That's what CoWork solves.</div>
 
             <div class="demo">
-                <h3>6a. Create the Semantic View (live)</h3>
-                <div class="do">AI &amp; ML &rarr; Analyst &rarr; Semantic Views &rarr; Create with Autopilot</div>
-                <div class="do">Select V_PAYMENTS_ANALYSIS as the source</div>
-                <div class="do">Name it SV_PAYMENTS_BARCLAYS &mdash; let Autopilot generate the definitions</div>
-                <div class="do">Review the generated metrics and dimensions &mdash; show how business language maps to columns</div>
+                <h3>6a. Create the Semantic View</h3>
+                <p style="color:var(--g500); font-size:0.8rem; margin-bottom:0.5rem;"><span class="file-ref">sql/05_intelligence.sql</span> &mdash; Section 5.2</p>
+                <div class="do">Run the CREATE SEMANTIC VIEW statement &mdash; defines dimensions (type, region, date) and measures (volume, success rate, latency)</div>
+                <div class="do">Point out the COMMENT and SYNONYMS &mdash; these teach the AI what business terms mean</div>
                 <div class="say">The Semantic View defines trusted business definitions. This is what ensures the AI generates correct queries, not hallucinated ones.</div>
-                <div class="takeaway">Semantic Views are the governance layer for AI. They define what "total volume" or "success rate" means so every answer is consistent.</div>
+                <div class="takeaway">Semantic Views are the governance layer for AI &mdash; defined as code, version-controlled, auditable. They map business language to physical columns.</div>
             </div>
 
             <div class="demo">
-                <h3>6b. Create the Agent (live)</h3>
-                <div class="do">AI &amp; ML &rarr; Agents &rarr; Create Agent</div>
-                <div class="do">Name: BARCLAYS_PAYMENTS_AGENT</div>
-                <div class="do">Add tool: Query Structured Data &rarr; select SV_PAYMENTS_BARCLAYS</div>
-                <div class="do">Save &mdash; show how quick it is to go from data to conversational interface</div>
-                <div class="say">That's it. A conversational analytics agent over your payments data. Built in 60 seconds.</div>
-                <div class="takeaway">Creating an Agent takes seconds. It combines the Semantic View with conversational AI &mdash; no code, no deployment.</div>
+                <h3>6b. Create the Agent</h3>
+                <p style="color:var(--g500); font-size:0.8rem; margin-bottom:0.5rem;"><span class="file-ref">sql/05_intelligence.sql</span> &mdash; Section 5.3</p>
+                <div class="do">Run the CREATE CORTEX AGENT statement &mdash; links the semantic view as a tool, sets system prompt</div>
+                <div class="do">Point out: model selection, ANALYST_TOOL binding, system prompt for domain context</div>
+                <div class="say">That's it. A conversational analytics agent. Defined as code, deployable via CI/CD, version-controlled like everything else.</div>
+                <div class="takeaway">Agents are SQL objects &mdash; CREATE, ALTER, DROP. Same governance as tables. No UI-only config that can't be reproduced.</div>
             </div>
 
             <div class="demo">
