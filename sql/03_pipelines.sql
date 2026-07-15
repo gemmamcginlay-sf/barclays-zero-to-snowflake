@@ -115,15 +115,22 @@ FROM RAW.PAYMENTS GROUP BY STATUS ORDER BY TXN_COUNT DESC;
 
 
 -- ─── 3e. NOTEBOOKS ─── (Python + SQL together, deployable)
--- [Switch to Snowsight → Projects → Notebooks → Create Notebook]
+-- Pre-built notebook: notebook/payments_operations_analysis.ipynb
+-- Import into Snowsight: Projects → Notebooks → Import
+--
+-- NOTEBOOK CONTENTS (5 analysis sections):
+-- 1. SQL: Payment volume by type & status
+-- 2. Python: Failure rate pivot table (Pandas)
+-- 3. SQL + Python: Daily failure trend → Altair line chart
+-- 4. Python: Failure rate bar chart by payment type
+-- 5. SQL + Python: Processing time P50 vs P95 → grouped bar chart
 --
 -- DEMO FLOW:
--- 1. Create a new Notebook
--- 2. Add a SQL cell: GROUP BY PAYMENT_TYPE query (same as Section 3b)
--- 3. Add a Python cell: convert to Pandas, plot with matplotlib/altair
--- 4. Show: both cells run on Snowflake compute, no data leaves
--- 5. Show deployment: Click "Schedule" → set daily cadence → assign warehouse
--- 6. Explain: "This notebook is now a scheduled job. Same governance as Tasks."
+-- 1. Import or open the notebook
+-- 2. Run cells top-to-bottom — show SQL results flowing into Python charts
+-- 3. Point out: Python cells reference SQL cell results by NAME (e.g. payment_volume.to_pandas())
+-- 4. Show deployment: Click "Schedule" → daily cadence → assign warehouse
+-- 5. Explain: "This notebook is now a scheduled job. Same governance as Tasks."
 --
 -- KEY MESSAGE:
 -- "Notebooks bridge SQL and Python. Use them when you need data science
