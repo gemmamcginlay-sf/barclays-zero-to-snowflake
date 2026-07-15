@@ -160,6 +160,7 @@ Tableau CoWork Streamlit</div>
                 <li>Pay only when queries run &mdash; auto-suspend = zero idle cost</li>
                 <li>Approved patterns: dbt, Dynamic Tables, Tasks, Cortex AI, Streamlit</li>
             </ul>
+            <div class="note note-warn"><div>&#9888;&#65039;</div><div><strong>Demo vs Production:</strong><p>This demo uses Snowflake-native tables and plain-text synthetic data for clarity. In production: data sources from S3/Iceberg (no copy), sensitive fields arrive pre-tokenised (Design Principle #7), and schema names follow EDP tiers (Raw/Base/Prepared).</p></div></div>
             <div class="takeaway">Snowflake is not a data lake and not a separate copy of data. It's compute that sits on top of what already exists in S3.</div>
             <div class="transition">"Let me show you what this looks like..."</div>
         </div>
@@ -317,7 +318,7 @@ Tableau CoWork Streamlit</div>
 
             <div class="demo">
                 <h3>5b. Text Classification</h3>
-                <div class="do">Run CLASSIFY_TEXT() with custom categories &mdash; show topic assignment</div>
+                <div class="do">Show the TOPIC_CATEGORY column in FEEDBACK_ENRICHED results &mdash; point out auto-assigned categories</div>
                 <div class="say">Define your own categories. No training data needed. Cortex does the rest.</div>
                 <div class="takeaway">Classify any text into business-relevant categories. You define the labels.</div>
             </div>
@@ -395,6 +396,7 @@ Tableau CoWork Streamlit</div>
         </div>
         <div class="card-body">
             <div class="say">Not everyone wants a conversation or a BI tool. Sometimes you need a custom operational dashboard. Streamlit does that in Python &mdash; no frontend framework, no servers.</div>
+            <div class="note note-info"><div>&#8505;&#65039;</div><div><strong>Pre-req:</strong><p>Section 5 (Cortex AI) must be run first &mdash; the Streamlit app queries the AI-enriched Dynamic Tables created there.</p></div></div>
 
             <div class="demo">
                 <h3>Payments Health Monitor</h3>

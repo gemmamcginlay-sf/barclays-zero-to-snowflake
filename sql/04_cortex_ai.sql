@@ -1,6 +1,6 @@
 -- =====================================================
 -- BARCLAYS ZERO TO SNOWFLAKE
--- STEP 4: CORTEX AI ENRICHMENT
+-- SECTION 5: CORTEX AI ENRICHMENT
 -- Duration: ~20 minutes
 -- Pre-req: dbt models deployed (Step 3c) OR run after views created
 -- =====================================================
@@ -9,31 +9,31 @@ USE WAREHOUSE BARCLAYS_DEMO_WH;
 USE SCHEMA BARCLAYS_DEMO.ANALYTICS;
 
 
--- 4.1: Sentiment Analysis on customer feedback
+-- 4.1: Sentiment Analysis + Classification on customer feedback
+-- Uses CTEs to compute each AI function ONCE per row (not repeated in CASE)
 CREATE OR REPLACE TABLE FEEDBACK_ENRICHED AS
+WITH scored AS (
+    SELECT
+        f.*,
+        SNOWFLAKE.CORTEX.SENTIMENT(f.FEEDBACK_TEXT) AS RAW_SENTIMENT,
+        SNOWFLAKE.CORTEX.CLASSIFY_TEXT(
+            f.FEEDBACK_TEXT,
+            ['Performance Issue','Service Quality','Technical Problem','Positive Experience','Feature Request']
+        ) AS CLASSIFICATION
+    FROM BARCLAYS_DEMO.RAW.CUSTOMER_FEEDBACK f
+)
 SELECT
-    f.FEEDBACK_ID,
-    f.FEEDBACK_DATE,
-    f.CUSTOMER_NAME,
-    f.FEEDBACK_CHANNEL,
-    f.FEEDBACK_TEXT,
-    f.PAYMENT_TYPE,
-    f.RATING,
-    ROUND(SNOWFLAKE.CORTEX.SENTIMENT(f.FEEDBACK_TEXT), 3) AS SENTIMENT_SCORE,
+    FEEDBACK_ID, FEEDBACK_DATE, CUSTOMER_NAME, FEEDBACK_CHANNEL,
+    FEEDBACK_TEXT, PAYMENT_TYPE, RATING,
+    ROUND(RAW_SENTIMENT, 3) AS SENTIMENT_SCORE,
     CASE
-        WHEN SNOWFLAKE.CORTEX.SENTIMENT(f.FEEDBACK_TEXT) >  0.3 THEN 'POSITIVE'
-        WHEN SNOWFLAKE.CORTEX.SENTIMENT(f.FEEDBACK_TEXT) < -0.3 THEN 'NEGATIVE'
+        WHEN RAW_SENTIMENT >  0.3 THEN 'POSITIVE'
+        WHEN RAW_SENTIMENT < -0.3 THEN 'NEGATIVE'
         ELSE 'NEUTRAL'
     END AS SENTIMENT_LABEL,
-    SNOWFLAKE.CORTEX.CLASSIFY_TEXT(
-        f.FEEDBACK_TEXT,
-        ['Performance Issue','Service Quality','Technical Problem','Positive Experience','Feature Request']
-    ):label::STRING AS TOPIC_CATEGORY,
-    SNOWFLAKE.CORTEX.CLASSIFY_TEXT(
-        f.FEEDBACK_TEXT,
-        ['Performance Issue','Service Quality','Technical Problem','Positive Experience','Feature Request']
-    ):score::FLOAT AS CLASSIFICATION_CONFIDENCE
-FROM BARCLAYS_DEMO.RAW.CUSTOMER_FEEDBACK f;
+    CLASSIFICATION:label::STRING AS TOPIC_CATEGORY,
+    CLASSIFICATION:score::FLOAT AS CLASSIFICATION_CONFIDENCE
+FROM scored;
 
 -- Preview enriched feedback
 SELECT
@@ -91,7 +91,10 @@ ORDER BY AVG_SENTIMENT ASC;
 
 -- =====================================================
 -- 4.5: AI-POWERED DYNAMIC TABLES
--- These refresh automatically when source data changes
+-- These refresh automatically when source data changes.
+-- NOTE: In production, FEEDBACK_ENRICHED would be a view or stream-fed table
+-- so the DTs genuinely auto-refresh as new feedback arrives. Here we use a
+-- static CTAS for demo speed — the pattern is the same.
 -- =====================================================
 
 -- DT 1: Live Negative Sentiment Feed

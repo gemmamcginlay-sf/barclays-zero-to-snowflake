@@ -1,6 +1,6 @@
 -- =====================================================
 -- BARCLAYS ZERO TO SNOWFLAKE
--- STEP 5: SNOWFLAKE INTELLIGENCE CoWork (Agent Demo)
+-- SECTION 6: SNOWFLAKE INTELLIGENCE CoWork (Agent Demo)
 -- Duration: ~15 minutes
 -- Pre-req: dbt marts deployed (Step 3c)
 -- =====================================================

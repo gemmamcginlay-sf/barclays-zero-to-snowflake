@@ -1,6 +1,6 @@
 -- =====================================================
 -- BARCLAYS ZERO TO SNOWFLAKE
--- STEP 2: QUERYING DATA
+-- SECTION 3: QUERYING DATA
 -- Duration: ~12 minutes
 -- Covers: Explore, Aggregate, Window functions, Time Travel
 -- =====================================================

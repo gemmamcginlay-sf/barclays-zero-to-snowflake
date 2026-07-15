@@ -7,6 +7,12 @@
 USE ROLE SYSADMIN;
 
 -- Create demo database with EDP-aligned layered schemas
+-- NOTE: EDP tiers are Raw / Base / Prepared. This demo uses RAW / STAGING / ANALYTICS / PREPARED
+-- for clarity in the demo context. The mapping is:
+--   RAW       = EDP Raw layer
+--   STAGING   = EDP Base layer (cleansed, typed)
+--   ANALYTICS = EDP Prepared layer (business logic, KPIs)
+--   PREPARED  = Operational layer (Dynamic Tables, Streamlit, apps)
 CREATE OR REPLACE DATABASE BARCLAYS_DEMO
     COMMENT = 'Barclays Zero to Snowflake — Payments Data Product Demo';
 

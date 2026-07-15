@@ -1,6 +1,6 @@
 -- =====================================================
 -- BARCLAYS ZERO TO SNOWFLAKE
--- STEP 3: PIPELINES (Views, Dynamic Tables, dbt, Streams+Tasks, Procedures)
+-- SECTION 4: PIPELINES (Views, Dynamic Tables, dbt, Streams+Tasks, Notebooks, Procedures)
 -- Duration: ~25 minutes
 -- =====================================================
 

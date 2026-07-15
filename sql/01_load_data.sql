@@ -8,6 +8,15 @@
 USE WAREHOUSE BARCLAYS_DEMO_WH;
 USE SCHEMA BARCLAYS_DEMO.RAW;
 
+-- NOTE: Design Principle #7 — In production, sensitive fields (ORIGINATOR_NAME,
+-- BENEFICIARY_NAME, CUSTOMER_NAME) arrive PRE-TOKENISED before reaching Snowflake.
+-- De-tokenisation is controlled via masking policies + entitlements.
+-- This demo uses synthetic plain-text data for readability.
+
+-- NOTE: This demo uses Snowflake-native tables for simplicity.
+-- In production, EDP sources data from S3/Iceberg via catalog integration.
+-- Snowflake reads from Iceberg without moving or copying the data.
+
 -- 1.1: Payment Transactions (50,000 rows — 12 months)
 CREATE OR REPLACE TABLE PAYMENTS (
     PAYMENT_ID         VARCHAR(20),
