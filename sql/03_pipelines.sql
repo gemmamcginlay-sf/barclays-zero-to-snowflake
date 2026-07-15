@@ -114,7 +114,24 @@ FROM RAW.PAYMENTS GROUP BY STATUS ORDER BY TXN_COUNT DESC;
 -- Compare to Step 1: PENDING dropped by 5, COMPLETED went up by 5
 
 
--- ─── 3e. STORED PROCEDURES ─── (control flow, IF/ELSE)
+-- ─── 3e. NOTEBOOKS ─── (Python + SQL together, deployable)
+-- [Switch to Snowsight → Projects → Notebooks → Create Notebook]
+--
+-- DEMO FLOW:
+-- 1. Create a new Notebook
+-- 2. Add a SQL cell: GROUP BY PAYMENT_TYPE query (same as Section 3b)
+-- 3. Add a Python cell: convert to Pandas, plot with matplotlib/altair
+-- 4. Show: both cells run on Snowflake compute, no data leaves
+-- 5. Show deployment: Click "Schedule" → set daily cadence → assign warehouse
+-- 6. Explain: "This notebook is now a scheduled job. Same governance as Tasks."
+--
+-- KEY MESSAGE:
+-- "Notebooks bridge SQL and Python. Use them when you need data science
+--  logic alongside SQL transforms. And they deploy as scheduled pipelines
+--  — not just for exploration."
+
+
+-- ─── 3f. STORED PROCEDURES ─── (control flow, IF/ELSE)
 CREATE OR REPLACE PROCEDURE PREPARED.FLAG_AGED_FAILURES()
     RETURNS VARCHAR LANGUAGE SQL EXECUTE AS CALLER
 AS

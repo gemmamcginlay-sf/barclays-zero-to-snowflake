@@ -234,7 +234,7 @@ Tableau CoWork Streamlit</div>
         </div>
         <div class="card-body">
             <p style="color:var(--g500); font-size:0.8rem; margin-bottom:1rem;"><span class="file-ref">sql/03_pipelines.sql</span></p>
-            <div class="say">Five transformation patterns. Think of this as the menu &mdash; pick the right tool for each job.</div>
+            <div class="say">Six transformation patterns. Think of this as the menu &mdash; pick the right tool for each job.</div>
             <div class="note note-info"><div>&#8505;&#65039;</div><div><strong>EDP Principle #11:</strong><p>dbt is the strategic standard. Dynamic Tables, Tasks, and Procedures are all supported.</p></div></div>
 
             <div class="demo">
@@ -275,7 +275,20 @@ Tableau CoWork Streamlit</div>
             </div>
 
             <div class="demo">
-                <h3>4e. Stored Procedures &mdash; control flow</h3>
+                <h3>4e. Notebooks &mdash; Python + SQL together</h3>
+                <div class="do">Open Snowsight &rarr; Projects &rarr; Notebooks &rarr; Create Notebook</div>
+                <div class="do">Add a SQL cell: query PAYMENTS with a GROUP BY &mdash; show results inline</div>
+                <div class="do">Add a Python cell: import the results as a Pandas DataFrame, create a matplotlib/altair chart</div>
+                <div class="do">Show: mix SQL and Python in the same document, each cell runs on Snowflake compute</div>
+                <div class="say">Notebooks let you combine SQL exploration with Python analysis in one place. No local setup, no data download &mdash; everything runs on Snowflake compute.</div>
+                <div class="do">Show deployment: click Schedule &rarr; set to run daily &rarr; assign a warehouse</div>
+                <div class="do">Show: the notebook becomes a scheduled job, just like a Task</div>
+                <div class="say">Notebooks aren't just for ad-hoc exploration. You can deploy them as scheduled pipelines &mdash; same as dbt or Tasks, but with Python when you need it.</div>
+                <div class="takeaway">Notebooks bridge SQL and Python in a single governed environment. Deploy them as scheduled jobs for pipelines that need data science logic alongside SQL transforms.</div>
+            </div>
+
+            <div class="demo">
+                <h3>4f. Stored Procedures &mdash; control flow</h3>
                 <div class="do">Create and CALL FLAG_AGED_FAILURES() &mdash; show IF/ELSE logic returning a count</div>
                 <div class="takeaway">For logic that needs branching, loops, or error handling. Supports SQL, Python, Java, JavaScript.</div>
             </div>
