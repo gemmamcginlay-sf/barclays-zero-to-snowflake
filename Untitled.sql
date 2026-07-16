@@ -1,0 +1,5 @@
+EXECUTE DBT PROJECT FROM WORKSPACE "USER$"."PUBLIC"."barclays-zero-to-snowflake" 
+  PROJECT_ROOT='/dbt' 
+  ARGS='build --target dev';
+
+  DROP SCHEMA IF EXISTS BARCLAYS_DEMO.ANALYTICS_ANALYTICS;

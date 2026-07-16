@@ -1,0 +1,1416 @@
+
+
+============================== 15:43:23.503886 | 40f7bdcf-134f-4d50-960a-84971001c93e ==============================
+[0m15:43:23.503886 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m15:43:23.504885 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'introspect': 'True', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m15:43:23.510573 [error] [Dummy-1   ]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'SNOWFLAKE_ACCOUNT'
+[0m15:43:23.512322 [debug] [Dummy-1   ]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 0.0857335, "process_in_blocks": "0", "process_kernel_time": 0.49, "process_mem_max_rss": "391664", "process_out_blocks": "0", "process_user_time": 3.07}
+[0m15:43:23.513025 [debug] [Dummy-1   ]: Command `cli build` failed at 15:43:23.512752 after 0.09 seconds
+[0m15:43:23.513595 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 15:48:38.552183 | c50780ad-cfbd-4682-9a82-51cba57f4931 ==============================
+[0m15:48:38.552183 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m15:48:38.553331 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m15:48:38.559613 [error] [Dummy-1   ]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'SNOWFLAKE_ACCOUNT'
+[0m15:48:38.561565 [debug] [Dummy-1   ]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 0.10880962, "process_in_blocks": "0", "process_kernel_time": 0.63, "process_mem_max_rss": "389316", "process_out_blocks": "0", "process_user_time": 3.69}
+[0m15:48:38.562316 [debug] [Dummy-1   ]: Command `cli build` failed at 15:48:38.562030 after 0.11 seconds
+[0m15:48:38.562877 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 15:49:50.686262 | f313f4ba-ede1-492e-a858-5f075a3eb248 ==============================
+[0m15:49:50.686262 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m15:49:50.687314 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m15:49:51.050547 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m15:49:51.815395 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m15:49:51.816903 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m15:49:54.011693 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m15:49:54.014208 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m15:49:54.090438 [info ] [Dummy-1   ]: Found 3 models, 7 data tests, 4 sources, 474 macros
+[0m15:49:54.093961 [info ] [Dummy-1   ]: 
+[0m15:49:54.094559 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m15:49:54.095029 [info ] [Dummy-1   ]: 
+[0m15:49:54.095823 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m15:49:54.103043 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BARCLAYS_DEMO'
+[0m15:49:54.347793 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO"
+[0m15:49:54.348572 [debug] [ThreadPool]: On list_BARCLAYS_DEMO: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO"} */
+show terse schemas in database BARCLAYS_DEMO
+    limit 10000
+[0m15:49:54.349109 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:49:54.856192 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.507 seconds
+[0m15:49:54.859209 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_BARCLAYS_DEMO, now create_BARCLAYS_DEMO_ANALYTICS_ANALYTICS)
+[0m15:49:54.860019 [debug] [ThreadPool]: Creating schema "database: "BARCLAYS_DEMO"
+schema: "ANALYTICS_ANALYTICS"
+"
+[0m15:49:54.868179 [debug] [ThreadPool]: Using snowflake connection "create_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"
+[0m15:49:54.868964 [debug] [ThreadPool]: On create_BARCLAYS_DEMO_ANALYTICS_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "create_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"} */
+create schema if not exists BARCLAYS_DEMO.ANALYTICS_ANALYTICS
+[0m15:49:54.869471 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:49:55.198608 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.329 seconds
+[0m15:49:55.202557 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS'
+[0m15:49:55.220867 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"
+[0m15:49:55.221515 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m15:49:55.221999 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:49:55.541848 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.320 seconds
+[0m15:49:55.547620 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"
+[0m15:49:55.548232 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"} */
+show objects in BARCLAYS_DEMO.ANALYTICS_ANALYTICS
+    limit 10000
+    
+;
+[0m15:49:55.612395 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.063 seconds
+[0m15:49:55.614832 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"
+[0m15:49:55.615419 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m15:49:55.662949 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.047 seconds
+[0m15:49:55.671320 [debug] [Thread-2 (]: Began running node model.barclays_payments.stg_payments
+[0m15:49:55.672346 [info ] [Thread-2 (]: 1 of 10 START sql view model ANALYTICS_ANALYTICS.stg_payments .................. [RUN]
+[0m15:49:55.673137 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS, now model.barclays_payments.stg_payments)
+[0m15:49:55.674166 [debug] [Thread-2 (]: Began compiling node model.barclays_payments.stg_payments
+[0m15:49:55.685784 [debug] [Thread-2 (]: Writing injected SQL for node "model.barclays_payments.stg_payments"
+[0m15:49:55.686819 [debug] [Thread-2 (]: Began executing node model.barclays_payments.stg_payments
+[0m15:49:55.740608 [debug] [Thread-2 (]: Writing runtime sql for node "model.barclays_payments.stg_payments"
+[0m15:49:55.742844 [debug] [Thread-2 (]: Using snowflake connection "model.barclays_payments.stg_payments"
+[0m15:49:55.743561 [debug] [Thread-2 (]: On model.barclays_payments.stg_payments: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.stg_payments"} */
+create or replace   view BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+  
+   as (
+    WITH source AS (
+    SELECT * FROM BARCLAYS_DEMO.RAW.payments
+)
+
+SELECT
+    PAYMENT_ID,
+    PAYMENT_DATE,
+    PAYMENT_DATE::DATE AS PAYMENT_DAY,
+    ORIGINATOR_NAME,
+    BENEFICIARY_NAME,
+    PAYMENT_TYPE,
+    CHANNEL,
+    CURRENCY,
+    AMOUNT,
+    CASE
+        WHEN AMOUNT < 5000 THEN 'RETAIL'
+        WHEN AMOUNT < 100000 THEN 'CORPORATE'
+        ELSE 'LARGE VALUE'
+    END AS VALUE_BAND,
+    STATUS,
+    PROCESSING_TIME_MS,
+    ERROR_CODE,
+    REGION
+FROM source
+WHERE PAYMENT_ID IS NOT NULL
+  );
+[0m15:49:55.744165 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:49:56.224694 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.480 seconds
+[0m15:49:56.256348 [info ] [Thread-2 (]: 1 of 10 OK created sql view model ANALYTICS_ANALYTICS.stg_payments ............. [[32mSUCCESS 1[0m in 0.58s]
+[0m15:49:56.257358 [debug] [Thread-2 (]: Finished running node model.barclays_payments.stg_payments
+[0m15:49:56.259039 [debug] [Thread-4 (]: Began running node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e
+[0m15:49:56.259735 [debug] [Thread-5 (]: Began running node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m15:49:56.260478 [debug] [Thread-3 (]: Began running node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m15:49:56.261175 [debug] [Thread-2 (]: Began running node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m15:49:56.261790 [info ] [Thread-4 (]: 2 of 10 START test accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED  [RUN]
+[0m15:49:56.262432 [info ] [Thread-5 (]: 3 of 10 START test not_null_stg_payments_PAYMENT_ID ............................ [RUN]
+[0m15:49:56.263061 [info ] [Thread-3 (]: 4 of 10 START test not_null_stg_payments_PAYMENT_TYPE .......................... [RUN]
+[0m15:49:56.263667 [info ] [Thread-2 (]: 5 of 10 START test unique_stg_payments_PAYMENT_ID .............................. [RUN]
+[0m15:49:56.264544 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e'
+[0m15:49:56.265280 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8'
+[0m15:49:56.265899 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly create_BARCLAYS_DEMO_ANALYTICS_ANALYTICS, now test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1)
+[0m15:49:56.266505 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.barclays_payments.stg_payments, now test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d)
+[0m15:49:56.267096 [debug] [Thread-4 (]: Began compiling node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e
+[0m15:49:56.267655 [debug] [Thread-5 (]: Began compiling node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m15:49:56.268211 [debug] [Thread-3 (]: Began compiling node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m15:49:56.268872 [debug] [Thread-2 (]: Began compiling node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m15:49:56.279750 [debug] [Thread-4 (]: Writing injected SQL for node "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e"
+[0m15:49:56.293635 [debug] [Thread-5 (]: Writing injected SQL for node "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"
+[0m15:49:56.301129 [debug] [Thread-3 (]: Writing injected SQL for node "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"
+[0m15:49:56.311409 [debug] [Thread-2 (]: Writing injected SQL for node "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"
+[0m15:49:56.312755 [debug] [Thread-4 (]: Began executing node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e
+[0m15:49:56.313607 [debug] [Thread-5 (]: Began executing node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m15:49:56.314516 [debug] [Thread-3 (]: Began executing node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m15:49:56.325880 [debug] [Thread-2 (]: Began executing node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m15:49:56.339935 [debug] [Thread-4 (]: Writing runtime sql for node "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e"
+[0m15:49:56.347558 [debug] [Thread-5 (]: Writing runtime sql for node "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"
+[0m15:49:56.352687 [debug] [Thread-3 (]: Writing runtime sql for node "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"
+[0m15:49:56.357758 [debug] [Thread-2 (]: Writing runtime sql for node "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"
+[0m15:49:56.359990 [debug] [Thread-4 (]: Using snowflake connection "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e"
+[0m15:49:56.361364 [debug] [Thread-5 (]: Using snowflake connection "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"
+[0m15:49:56.362641 [debug] [Thread-3 (]: Using snowflake connection "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"
+[0m15:49:56.363395 [debug] [Thread-4 (]: On test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        STATUS as value_field,
+        count(*) as n_records
+
+    from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+    group by STATUS
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'COMPLETED','PENDING','FAILED','RETURNED'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m15:49:56.364756 [debug] [Thread-2 (]: Using snowflake connection "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"
+[0m15:49:56.365372 [debug] [Thread-5 (]: On test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select PAYMENT_ID
+from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+where PAYMENT_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m15:49:56.366032 [debug] [Thread-3 (]: On test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select PAYMENT_TYPE
+from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+where PAYMENT_TYPE is null
+
+
+
+      
+    ) dbt_internal_test
+[0m15:49:56.366686 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:49:56.367323 [debug] [Thread-2 (]: On test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    PAYMENT_ID as unique_field,
+    count(*) as n_records
+
+from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+where PAYMENT_ID is not null
+group by PAYMENT_ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m15:49:56.367921 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m15:49:56.368583 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:49:56.369284 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:49:57.139071 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.770 seconds
+[0m15:49:57.144389 [info ] [Thread-3 (]: 4 of 10 PASS not_null_stg_payments_PAYMENT_TYPE ................................ [[32mPASS[0m in 0.88s]
+[0m15:49:57.145351 [debug] [Thread-3 (]: Finished running node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m15:49:57.161534 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.793 seconds
+[0m15:49:57.164502 [info ] [Thread-5 (]: 3 of 10 PASS not_null_stg_payments_PAYMENT_ID .................................. [[32mPASS[0m in 0.90s]
+[0m15:49:57.165436 [debug] [Thread-5 (]: Finished running node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m15:49:57.282294 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.915 seconds
+[0m15:49:57.285360 [error] [Thread-4 (]: 2 of 10 FAIL 1 accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED  [[31mFAIL 1[0m in 1.02s]
+[0m15:49:57.286294 [debug] [Thread-4 (]: Finished running node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e
+[0m15:49:57.287212 [debug] [Thread-8 (]: Marking all children of 'test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e' to be skipped because of status 'fail'.  Reason: Got 1 result, configured to fail if != 0.
+[0m15:49:57.308450 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.939 seconds
+[0m15:49:57.311396 [info ] [Thread-2 (]: 5 of 10 PASS unique_stg_payments_PAYMENT_ID .................................... [[32mPASS[0m in 1.04s]
+[0m15:49:57.312339 [debug] [Thread-2 (]: Finished running node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m15:49:57.313570 [debug] [Thread-3 (]: Began running node model.barclays_payments.mart_payment_kpis
+[0m15:49:57.314408 [info ] [Thread-3 (]: 6 of 10 SKIP relation ANALYTICS_ANALYTICS.mart_payment_kpis .................... [[33mSKIP[0m]
+[0m15:49:57.315039 [debug] [Thread-3 (]: Finished running node model.barclays_payments.mart_payment_kpis
+[0m15:49:57.315610 [debug] [Thread-8 (]: Marking all children of 'model.barclays_payments.mart_payment_kpis' to be skipped because of status 'skipped'. 
+[0m15:49:57.316699 [debug] [Thread-4 (]: Began running node test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422
+[0m15:49:57.317301 [debug] [Thread-2 (]: Began running node test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092
+[0m15:49:57.318095 [info ] [Thread-4 (]: 7 of 10 SKIP test not_null_mart_payment_kpis_PAYMENT_DATE ...................... [[33mSKIP[0m]
+[0m15:49:57.318917 [info ] [Thread-2 (]: 8 of 10 SKIP test not_null_mart_payment_kpis_TOTAL_PAYMENTS .................... [[33mSKIP[0m]
+[0m15:49:57.319654 [debug] [Thread-4 (]: Finished running node test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422
+[0m15:49:57.320289 [debug] [Thread-2 (]: Finished running node test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092
+[0m15:49:57.321065 [debug] [Thread-8 (]: Marking all children of 'test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422' to be skipped because of status 'skipped'. 
+[0m15:49:57.321866 [debug] [Thread-8 (]: Marking all children of 'test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092' to be skipped because of status 'skipped'. 
+[0m15:49:57.322904 [debug] [Thread-3 (]: Began running node model.barclays_payments.mart_sla_compliance
+[0m15:49:57.323717 [info ] [Thread-3 (]: 9 of 10 SKIP relation ANALYTICS_ANALYTICS.mart_sla_compliance .................. [[33mSKIP[0m]
+[0m15:49:57.324371 [debug] [Thread-3 (]: Finished running node model.barclays_payments.mart_sla_compliance
+[0m15:49:57.324945 [debug] [Thread-8 (]: Marking all children of 'model.barclays_payments.mart_sla_compliance' to be skipped because of status 'skipped'. 
+[0m15:49:57.325902 [debug] [Thread-4 (]: Began running node test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337
+[0m15:49:57.326747 [info ] [Thread-4 (]: 10 of 10 SKIP test accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH  [[33mSKIP[0m]
+[0m15:49:57.327378 [debug] [Thread-4 (]: Finished running node test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337
+[0m15:49:57.327944 [debug] [Thread-8 (]: Marking all children of 'test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337' to be skipped because of status 'skipped'. 
+[0m15:49:57.332037 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m15:49:57.332805 [debug] [Dummy-1   ]: Connection 'test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1' was properly closed.
+[0m15:49:57.333296 [debug] [Dummy-1   ]: Connection 'test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d' was properly closed.
+[0m15:49:57.333745 [debug] [Dummy-1   ]: Connection 'test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED.7577f5571e' was properly closed.
+[0m15:49:57.334184 [debug] [Dummy-1   ]: Connection 'test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8' was properly closed.
+[0m15:49:57.334781 [info ] [Dummy-1   ]: 
+[0m15:49:57.335300 [info ] [Dummy-1   ]: Finished running 2 table models, 7 data tests, 1 view model in 0 hours 0 minutes and 3.24 seconds (3.24s).
+[0m15:49:57.337179 [debug] [Dummy-1   ]: Command end result
+[0m15:49:57.370917 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m15:49:57.373479 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m15:49:57.381541 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m15:49:57.382097 [info ] [Dummy-1   ]: 
+[0m15:49:57.382696 [info ] [Dummy-1   ]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:49:57.383192 [info ] [Dummy-1   ]: 
+[0m15:49:57.383860 [error] [Dummy-1   ]: [31mFailure in test accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED (models/staging/schema.yml)[0m
+[0m15:49:57.384501 [error] [Dummy-1   ]:   Got 1 result, configured to fail if != 0
+[0m15:49:57.384959 [info ] [Dummy-1   ]: 
+[0m15:49:57.385508 [info ] [Dummy-1   ]:   compiled code at /tmp/dbt/target/compiled/barclays_payments/models/staging/schema.yml/accepted_values_stg_payments_c009c503256eb3544baa494190b778ad.sql
+[0m15:49:57.385999 [info ] [Dummy-1   ]: 
+[0m15:49:57.386510 [info ] [Dummy-1   ]: Done. PASS=4 WARN=0 ERROR=1 SKIP=5 TOTAL=10
+[0m15:49:57.388419 [debug] [Dummy-1   ]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 6.7973366, "process_in_blocks": "0", "process_kernel_time": 1.22, "process_mem_max_rss": "511624", "process_out_blocks": "0", "process_user_time": 7.0}
+[0m15:49:57.389130 [debug] [Dummy-1   ]: Command `cli build` failed at 15:49:57.388860 after 6.80 seconds
+[0m15:49:57.389694 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 15:55:10.942590 | 2390fd84-9ca5-4a09-b400-d99b9c3183f8 ==============================
+[0m15:55:10.942590 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m15:55:10.943407 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt ', 'log_format': 'default', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m15:55:11.213335 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m15:55:11.785870 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m15:55:11.976480 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:55:11.977486 [debug] [Dummy-1   ]: Partial parsing: updated file: barclays_payments://models/staging/schema.yml
+[0m15:55:12.683616 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m15:55:12.685401 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m15:55:12.744271 [info ] [Dummy-1   ]: Found 3 models, 7 data tests, 4 sources, 474 macros
+[0m15:55:12.746982 [info ] [Dummy-1   ]: 
+[0m15:55:12.747501 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m15:55:12.747942 [info ] [Dummy-1   ]: 
+[0m15:55:12.748782 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m15:55:12.754061 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BARCLAYS_DEMO'
+[0m15:55:12.885185 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO"
+[0m15:55:12.885714 [debug] [ThreadPool]: On list_BARCLAYS_DEMO: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO"} */
+show terse schemas in database BARCLAYS_DEMO
+    limit 10000
+[0m15:55:12.886178 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:55:13.219388 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.333 seconds
+[0m15:55:13.222893 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS'
+[0m15:55:13.235028 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"
+[0m15:55:13.235519 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m15:55:13.236019 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:55:13.587410 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.351 seconds
+[0m15:55:13.591771 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"
+[0m15:55:13.592313 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"} */
+show objects in BARCLAYS_DEMO.ANALYTICS_ANALYTICS
+    limit 10000
+    
+;
+[0m15:55:13.688685 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.096 seconds
+[0m15:55:13.690655 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"
+[0m15:55:13.691149 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m15:55:13.748893 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.057 seconds
+[0m15:55:13.756474 [debug] [Thread-2 (]: Began running node model.barclays_payments.stg_payments
+[0m15:55:13.757261 [info ] [Thread-2 (]: 1 of 10 START sql view model ANALYTICS_ANALYTICS.stg_payments .................. [RUN]
+[0m15:55:13.758306 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS, now model.barclays_payments.stg_payments)
+[0m15:55:13.758847 [debug] [Thread-2 (]: Began compiling node model.barclays_payments.stg_payments
+[0m15:55:13.767172 [debug] [Thread-2 (]: Writing injected SQL for node "model.barclays_payments.stg_payments"
+[0m15:55:13.767917 [debug] [Thread-2 (]: Began executing node model.barclays_payments.stg_payments
+[0m15:55:13.807645 [debug] [Thread-2 (]: Writing runtime sql for node "model.barclays_payments.stg_payments"
+[0m15:55:13.809139 [debug] [Thread-2 (]: Using snowflake connection "model.barclays_payments.stg_payments"
+[0m15:55:13.809708 [debug] [Thread-2 (]: On model.barclays_payments.stg_payments: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.stg_payments"} */
+create or replace   view BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+  
+   as (
+    WITH source AS (
+    SELECT * FROM BARCLAYS_DEMO.RAW.payments
+)
+
+SELECT
+    PAYMENT_ID,
+    PAYMENT_DATE,
+    PAYMENT_DATE::DATE AS PAYMENT_DAY,
+    ORIGINATOR_NAME,
+    BENEFICIARY_NAME,
+    PAYMENT_TYPE,
+    CHANNEL,
+    CURRENCY,
+    AMOUNT,
+    CASE
+        WHEN AMOUNT < 5000 THEN 'RETAIL'
+        WHEN AMOUNT < 100000 THEN 'CORPORATE'
+        ELSE 'LARGE VALUE'
+    END AS VALUE_BAND,
+    STATUS,
+    PROCESSING_TIME_MS,
+    ERROR_CODE,
+    REGION
+FROM source
+WHERE PAYMENT_ID IS NOT NULL
+  );
+[0m15:55:13.810207 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:55:14.247226 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.437 seconds
+[0m15:55:14.273380 [info ] [Thread-2 (]: 1 of 10 OK created sql view model ANALYTICS_ANALYTICS.stg_payments ............. [[32mSUCCESS 1[0m in 0.51s]
+[0m15:55:14.274138 [debug] [Thread-2 (]: Finished running node model.barclays_payments.stg_payments
+[0m15:55:14.275423 [debug] [Thread-4 (]: Began running node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72
+[0m15:55:14.275998 [debug] [Thread-5 (]: Began running node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m15:55:14.276614 [debug] [Thread-3 (]: Began running node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m15:55:14.277188 [debug] [Thread-2 (]: Began running node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m15:55:14.277729 [info ] [Thread-4 (]: 2 of 10 START test accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED  [RUN]
+[0m15:55:14.278391 [info ] [Thread-5 (]: 3 of 10 START test not_null_stg_payments_PAYMENT_ID ............................ [RUN]
+[0m15:55:14.278953 [info ] [Thread-3 (]: 4 of 10 START test not_null_stg_payments_PAYMENT_TYPE .......................... [RUN]
+[0m15:55:14.279522 [info ] [Thread-2 (]: 5 of 10 START test unique_stg_payments_PAYMENT_ID .............................. [RUN]
+[0m15:55:14.280211 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72'
+[0m15:55:14.280839 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8'
+[0m15:55:14.281442 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_BARCLAYS_DEMO, now test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1)
+[0m15:55:14.282024 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.barclays_payments.stg_payments, now test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d)
+[0m15:55:14.282522 [debug] [Thread-4 (]: Began compiling node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72
+[0m15:55:14.282977 [debug] [Thread-5 (]: Began compiling node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m15:55:14.283447 [debug] [Thread-3 (]: Began compiling node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m15:55:14.283908 [debug] [Thread-2 (]: Began compiling node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m15:55:14.289660 [debug] [Thread-4 (]: Writing injected SQL for node "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72"
+[0m15:55:14.299187 [debug] [Thread-5 (]: Writing injected SQL for node "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"
+[0m15:55:14.304420 [debug] [Thread-3 (]: Writing injected SQL for node "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"
+[0m15:55:14.311591 [debug] [Thread-2 (]: Writing injected SQL for node "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"
+[0m15:55:14.312573 [debug] [Thread-4 (]: Began executing node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72
+[0m15:55:14.313329 [debug] [Thread-5 (]: Began executing node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m15:55:14.314102 [debug] [Thread-3 (]: Began executing node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m15:55:14.332581 [debug] [Thread-4 (]: Writing runtime sql for node "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72"
+[0m15:55:14.333084 [debug] [Thread-2 (]: Began executing node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m15:55:14.336597 [debug] [Thread-5 (]: Writing runtime sql for node "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"
+[0m15:55:14.339980 [debug] [Thread-3 (]: Writing runtime sql for node "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"
+[0m15:55:14.343680 [debug] [Thread-2 (]: Writing runtime sql for node "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"
+[0m15:55:14.344817 [debug] [Thread-4 (]: Using snowflake connection "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72"
+[0m15:55:14.346127 [debug] [Thread-5 (]: Using snowflake connection "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"
+[0m15:55:14.347237 [debug] [Thread-3 (]: Using snowflake connection "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"
+[0m15:55:14.347835 [debug] [Thread-4 (]: On test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        STATUS as value_field,
+        count(*) as n_records
+
+    from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+    group by STATUS
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'COMPLETED','PENDING','FAILED','RETURNED','CANCELLED'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m15:55:14.348850 [debug] [Thread-2 (]: Using snowflake connection "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"
+[0m15:55:14.349377 [debug] [Thread-5 (]: On test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select PAYMENT_ID
+from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+where PAYMENT_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m15:55:14.349909 [debug] [Thread-3 (]: On test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select PAYMENT_TYPE
+from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+where PAYMENT_TYPE is null
+
+
+
+      
+    ) dbt_internal_test
+[0m15:55:14.350464 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:55:14.350980 [debug] [Thread-2 (]: On test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    PAYMENT_ID as unique_field,
+    count(*) as n_records
+
+from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+where PAYMENT_ID is not null
+group by PAYMENT_ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m15:55:14.351459 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m15:55:14.351917 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:55:14.352472 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:55:14.969918 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.618 seconds
+[0m15:55:14.973932 [info ] [Thread-5 (]: 3 of 10 PASS not_null_stg_payments_PAYMENT_ID .................................. [[32mPASS[0m in 0.69s]
+[0m15:55:14.974716 [debug] [Thread-5 (]: Finished running node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m15:55:15.020056 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.668 seconds
+[0m15:55:15.022201 [info ] [Thread-3 (]: 4 of 10 PASS not_null_stg_payments_PAYMENT_TYPE ................................ [[32mPASS[0m in 0.74s]
+[0m15:55:15.022898 [debug] [Thread-3 (]: Finished running node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m15:55:15.033154 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.683 seconds
+[0m15:55:15.035133 [info ] [Thread-4 (]: 2 of 10 PASS accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED  [[32mPASS[0m in 0.75s]
+[0m15:55:15.035826 [debug] [Thread-4 (]: Finished running node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72
+[0m15:55:15.049291 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.697 seconds
+[0m15:55:15.051202 [info ] [Thread-2 (]: 5 of 10 PASS unique_stg_payments_PAYMENT_ID .................................... [[32mPASS[0m in 0.77s]
+[0m15:55:15.051889 [debug] [Thread-2 (]: Finished running node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m15:55:15.052801 [debug] [Thread-5 (]: Began running node model.barclays_payments.mart_payment_kpis
+[0m15:55:15.053625 [info ] [Thread-5 (]: 6 of 10 START sql table model ANALYTICS_ANALYTICS.mart_payment_kpis ............ [RUN]
+[0m15:55:15.054248 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8, now model.barclays_payments.mart_payment_kpis)
+[0m15:55:15.054742 [debug] [Thread-5 (]: Began compiling node model.barclays_payments.mart_payment_kpis
+[0m15:55:15.060771 [debug] [Thread-5 (]: Writing injected SQL for node "model.barclays_payments.mart_payment_kpis"
+[0m15:55:15.061451 [debug] [Thread-5 (]: Began executing node model.barclays_payments.mart_payment_kpis
+[0m15:55:15.085539 [debug] [Thread-5 (]: Writing runtime sql for node "model.barclays_payments.mart_payment_kpis"
+[0m15:55:15.087010 [debug] [Thread-5 (]: Using snowflake connection "model.barclays_payments.mart_payment_kpis"
+[0m15:55:15.087563 [debug] [Thread-5 (]: On model.barclays_payments.mart_payment_kpis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.mart_payment_kpis"} */
+create or replace transient table BARCLAYS_DEMO.ANALYTICS_ANALYTICS.mart_payment_kpis
+         as
+        (WITH payments AS (
+    SELECT * FROM BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+)
+
+SELECT
+    PAYMENT_DAY AS PAYMENT_DATE,
+    PAYMENT_TYPE,
+    REGION,
+    COUNT(*) AS TOTAL_PAYMENTS,
+    SUM(AMOUNT) AS TOTAL_VOLUME,
+    ROUND(100.0 * COUNT(CASE WHEN STATUS = 'COMPLETED' THEN 1 END) / COUNT(*), 2) AS SUCCESS_RATE_PCT,
+    ROUND(AVG(PROCESSING_TIME_MS), 0) AS AVG_PROCESSING_TIME_MS,
+    PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY PROCESSING_TIME_MS) AS P95_PROCESSING_TIME_MS
+FROM payments
+GROUP BY PAYMENT_DAY, PAYMENT_TYPE, REGION
+        );
+[0m15:55:15.088083 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m15:55:15.934820 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.847 seconds
+[0m15:55:15.937267 [info ] [Thread-5 (]: 6 of 10 OK created sql table model ANALYTICS_ANALYTICS.mart_payment_kpis ....... [[32mSUCCESS 1[0m in 0.88s]
+[0m15:55:15.937947 [debug] [Thread-5 (]: Finished running node model.barclays_payments.mart_payment_kpis
+[0m15:55:15.939013 [debug] [Thread-4 (]: Began running node test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422
+[0m15:55:15.939608 [debug] [Thread-2 (]: Began running node test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092
+[0m15:55:15.940239 [info ] [Thread-4 (]: 7 of 10 START test not_null_mart_payment_kpis_PAYMENT_DATE ..................... [RUN]
+[0m15:55:15.940810 [info ] [Thread-2 (]: 8 of 10 START test not_null_mart_payment_kpis_TOTAL_PAYMENTS ................... [RUN]
+[0m15:55:15.941418 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72, now test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422)
+[0m15:55:15.941986 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d, now test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092)
+[0m15:55:15.942493 [debug] [Thread-4 (]: Began compiling node test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422
+[0m15:55:15.943020 [debug] [Thread-2 (]: Began compiling node test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092
+[0m15:55:15.948315 [debug] [Thread-4 (]: Writing injected SQL for node "test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422"
+[0m15:55:15.953362 [debug] [Thread-2 (]: Writing injected SQL for node "test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092"
+[0m15:55:15.954218 [debug] [Thread-4 (]: Began executing node test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422
+[0m15:55:15.954758 [debug] [Thread-2 (]: Began executing node test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092
+[0m15:55:15.959739 [debug] [Thread-4 (]: Writing runtime sql for node "test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422"
+[0m15:55:16.028346 [debug] [Thread-2 (]: Writing runtime sql for node "test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092"
+[0m15:55:16.029760 [debug] [Thread-4 (]: Using snowflake connection "test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422"
+[0m15:55:16.030655 [debug] [Thread-2 (]: Using snowflake connection "test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092"
+[0m15:55:16.031168 [debug] [Thread-4 (]: On test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select PAYMENT_DATE
+from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.mart_payment_kpis
+where PAYMENT_DATE is null
+
+
+
+      
+    ) dbt_internal_test
+[0m15:55:16.031715 [debug] [Thread-2 (]: On test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select TOTAL_PAYMENTS
+from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.mart_payment_kpis
+where TOTAL_PAYMENTS is null
+
+
+
+      
+    ) dbt_internal_test
+[0m15:55:16.032254 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:55:16.032757 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:55:16.395305 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.362 seconds
+[0m15:55:16.395982 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.364 seconds
+[0m15:55:16.398096 [info ] [Thread-2 (]: 8 of 10 PASS not_null_mart_payment_kpis_TOTAL_PAYMENTS ......................... [[32mPASS[0m in 0.46s]
+[0m15:55:16.400100 [info ] [Thread-4 (]: 7 of 10 PASS not_null_mart_payment_kpis_PAYMENT_DATE ........................... [[32mPASS[0m in 0.46s]
+[0m15:55:16.400849 [debug] [Thread-2 (]: Finished running node test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092
+[0m15:55:16.401525 [debug] [Thread-4 (]: Finished running node test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422
+[0m15:55:16.402627 [debug] [Thread-5 (]: Began running node model.barclays_payments.mart_sla_compliance
+[0m15:55:16.403456 [info ] [Thread-5 (]: 9 of 10 START sql table model ANALYTICS_ANALYTICS.mart_sla_compliance .......... [RUN]
+[0m15:55:16.404060 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.barclays_payments.mart_payment_kpis, now model.barclays_payments.mart_sla_compliance)
+[0m15:55:16.404565 [debug] [Thread-5 (]: Began compiling node model.barclays_payments.mart_sla_compliance
+[0m15:55:16.408935 [debug] [Thread-5 (]: Writing injected SQL for node "model.barclays_payments.mart_sla_compliance"
+[0m15:55:16.409777 [debug] [Thread-5 (]: Began executing node model.barclays_payments.mart_sla_compliance
+[0m15:55:16.413888 [debug] [Thread-5 (]: Writing runtime sql for node "model.barclays_payments.mart_sla_compliance"
+[0m15:55:16.415580 [debug] [Thread-5 (]: Using snowflake connection "model.barclays_payments.mart_sla_compliance"
+[0m15:55:16.416125 [debug] [Thread-5 (]: On model.barclays_payments.mart_sla_compliance: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.mart_sla_compliance"} */
+create or replace transient table BARCLAYS_DEMO.ANALYTICS_ANALYTICS.mart_sla_compliance
+         as
+        (WITH kpis AS (
+    SELECT * FROM BARCLAYS_DEMO.ANALYTICS_ANALYTICS.mart_payment_kpis
+),
+
+sla AS (
+    SELECT * FROM BARCLAYS_DEMO.RAW.sla_definitions
+)
+
+SELECT
+    k.PAYMENT_DATE,
+    k.PAYMENT_TYPE,
+    k.REGION,
+    k.TOTAL_PAYMENTS,
+    k.TOTAL_VOLUME,
+    k.SUCCESS_RATE_PCT,
+    k.AVG_PROCESSING_TIME_MS,
+    s.SLA_NAME,
+    s.TARGET_SUCCESS_RATE,
+    s.MAX_PROCESSING_TIME_MS AS SLA_MAX_TIME_MS,
+    CASE
+        WHEN k.SUCCESS_RATE_PCT >= s.TARGET_SUCCESS_RATE
+             AND k.AVG_PROCESSING_TIME_MS <= s.MAX_PROCESSING_TIME_MS THEN 'COMPLIANT'
+        WHEN k.SUCCESS_RATE_PCT >= (s.TARGET_SUCCESS_RATE - 1.0)
+             AND k.AVG_PROCESSING_TIME_MS <= (s.MAX_PROCESSING_TIME_MS * 1.2) THEN 'AT RISK'
+        ELSE 'BREACH'
+    END AS SLA_STATUS
+FROM kpis k
+INNER JOIN sla s ON k.PAYMENT_TYPE = s.PAYMENT_TYPE
+        );
+[0m15:55:16.416653 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m15:55:17.246983 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.830 seconds
+[0m15:55:17.249995 [info ] [Thread-5 (]: 9 of 10 OK created sql table model ANALYTICS_ANALYTICS.mart_sla_compliance ..... [[32mSUCCESS 1[0m in 0.85s]
+[0m15:55:17.250700 [debug] [Thread-5 (]: Finished running node model.barclays_payments.mart_sla_compliance
+[0m15:55:17.251568 [debug] [Thread-2 (]: Began running node test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337
+[0m15:55:17.252224 [info ] [Thread-2 (]: 10 of 10 START test accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH  [RUN]
+[0m15:55:17.252805 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092, now test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337)
+[0m15:55:17.253263 [debug] [Thread-2 (]: Began compiling node test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337
+[0m15:55:17.260428 [debug] [Thread-2 (]: Writing injected SQL for node "test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337"
+[0m15:55:17.261104 [debug] [Thread-2 (]: Began executing node test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337
+[0m15:55:17.266360 [debug] [Thread-2 (]: Writing runtime sql for node "test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337"
+[0m15:55:17.267493 [debug] [Thread-2 (]: Using snowflake connection "test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337"
+[0m15:55:17.268019 [debug] [Thread-2 (]: On test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        SLA_STATUS as value_field,
+        count(*) as n_records
+
+    from BARCLAYS_DEMO.ANALYTICS_ANALYTICS.mart_sla_compliance
+    group by SLA_STATUS
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'COMPLIANT','AT RISK','BREACH'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m15:55:17.268578 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:55:17.674257 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.406 seconds
+[0m15:55:17.676229 [info ] [Thread-2 (]: 10 of 10 PASS accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH  [[32mPASS[0m in 0.42s]
+[0m15:55:17.676962 [debug] [Thread-2 (]: Finished running node test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337
+[0m15:55:17.680083 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m15:55:17.680766 [debug] [Dummy-1   ]: Connection 'test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1' was properly closed.
+[0m15:55:17.681328 [debug] [Dummy-1   ]: Connection 'test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337' was properly closed.
+[0m15:55:17.681864 [debug] [Dummy-1   ]: Connection 'test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422' was properly closed.
+[0m15:55:17.682295 [debug] [Dummy-1   ]: Connection 'model.barclays_payments.mart_sla_compliance' was properly closed.
+[0m15:55:17.682815 [info ] [Dummy-1   ]: 
+[0m15:55:17.683290 [info ] [Dummy-1   ]: Finished running 2 table models, 7 data tests, 1 view model in 0 hours 0 minutes and 4.93 seconds (4.93s).
+[0m15:55:17.685028 [debug] [Dummy-1   ]: Command end result
+[0m15:55:17.706563 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m15:55:17.708184 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m15:55:17.713999 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m15:55:17.714455 [info ] [Dummy-1   ]: 
+[0m15:55:17.715011 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m15:55:17.715507 [info ] [Dummy-1   ]: 
+[0m15:55:17.715977 [info ] [Dummy-1   ]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 TOTAL=10
+[0m15:55:17.717683 [debug] [Dummy-1   ]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 6.846449, "process_in_blocks": "0", "process_kernel_time": 0.81, "process_mem_max_rss": "513420", "process_out_blocks": "0", "process_user_time": 4.97}
+[0m15:55:17.718393 [debug] [Dummy-1   ]: Command `cli build` succeeded at 15:55:17.718073 after 6.85 seconds
+[0m15:55:17.718894 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 16:00:11.086537 | b53dd0ff-0f1f-4a85-a4b6-69a958644e16 ==============================
+[0m16:00:11.086537 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m16:00:11.087397 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m16:00:11.371533 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m16:00:11.925485 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m16:00:12.122441 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:00:12.123048 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:00:12.322502 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m16:00:12.324504 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m16:00:12.365346 [info ] [Dummy-1   ]: Found 3 models, 7 data tests, 4 sources, 474 macros
+[0m16:00:12.367639 [info ] [Dummy-1   ]: 
+[0m16:00:12.368412 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m16:00:12.368944 [info ] [Dummy-1   ]: 
+[0m16:00:12.369705 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m16:00:12.371230 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BARCLAYS_DEMO'
+[0m16:00:12.473182 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO"
+[0m16:00:12.473778 [debug] [ThreadPool]: On list_BARCLAYS_DEMO: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO"} */
+show terse schemas in database BARCLAYS_DEMO
+    limit 10000
+[0m16:00:12.474254 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:00:13.233078 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.759 seconds
+[0m16:00:13.240533 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_BARCLAYS_DEMO, now list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS)
+[0m16:00:13.253413 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"
+[0m16:00:13.253952 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m16:00:13.254375 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:00:13.887194 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.633 seconds
+[0m16:00:13.891891 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"
+[0m16:00:13.892447 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"} */
+show objects in BARCLAYS_DEMO.ANALYTICS_ANALYTICS
+    limit 10000
+    
+;
+[0m16:00:14.013134 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.120 seconds
+[0m16:00:14.015304 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"
+[0m16:00:14.015819 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m16:00:14.080150 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.063 seconds
+[0m16:00:14.088716 [debug] [Thread-2 (]: Began running node model.barclays_payments.stg_payments
+[0m16:00:14.089593 [info ] [Thread-2 (]: 1 of 1 START sql view model ANALYTICS_ANALYTICS.stg_payments ................... [RUN]
+[0m16:00:14.090311 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_BARCLAYS_DEMO_ANALYTICS_ANALYTICS, now model.barclays_payments.stg_payments)
+[0m16:00:14.090854 [debug] [Thread-2 (]: Began compiling node model.barclays_payments.stg_payments
+[0m16:00:14.100037 [debug] [Thread-2 (]: Writing injected SQL for node "model.barclays_payments.stg_payments"
+[0m16:00:14.100829 [debug] [Thread-2 (]: Began executing node model.barclays_payments.stg_payments
+[0m16:00:14.140127 [debug] [Thread-2 (]: Writing runtime sql for node "model.barclays_payments.stg_payments"
+[0m16:00:14.141721 [debug] [Thread-2 (]: Using snowflake connection "model.barclays_payments.stg_payments"
+[0m16:00:14.142310 [debug] [Thread-2 (]: On model.barclays_payments.stg_payments: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.stg_payments"} */
+create or replace   view BARCLAYS_DEMO.ANALYTICS_ANALYTICS.stg_payments
+  
+   as (
+    WITH source AS (
+    SELECT * FROM BARCLAYS_DEMO.RAW.payments
+)
+
+SELECT
+    PAYMENT_ID,
+    PAYMENT_DATE,
+    PAYMENT_DATE::DATE AS PAYMENT_DAY,
+    ORIGINATOR_NAME,
+    BENEFICIARY_NAME,
+    PAYMENT_TYPE,
+    CHANNEL,
+    CURRENCY,
+    AMOUNT,
+    CASE
+        WHEN AMOUNT < 5000 THEN 'RETAIL'
+        WHEN AMOUNT < 100000 THEN 'CORPORATE'
+        ELSE 'LARGE VALUE'
+    END AS VALUE_BAND,
+    STATUS,
+    PROCESSING_TIME_MS,
+    ERROR_CODE,
+    REGION
+FROM source
+WHERE PAYMENT_ID IS NOT NULL
+  );
+[0m16:00:14.142875 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:00:14.887230 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.744 seconds
+[0m16:00:14.916294 [info ] [Thread-2 (]: 1 of 1 OK created sql view model ANALYTICS_ANALYTICS.stg_payments .............. [[32mSUCCESS 1[0m in 0.82s]
+[0m16:00:14.917228 [debug] [Thread-2 (]: Finished running node model.barclays_payments.stg_payments
+[0m16:00:14.920332 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m16:00:14.920838 [debug] [Dummy-1   ]: Connection 'model.barclays_payments.stg_payments' was properly closed.
+[0m16:00:14.921300 [info ] [Dummy-1   ]: 
+[0m16:00:14.921755 [info ] [Dummy-1   ]: Finished running 1 view model in 0 hours 0 minutes and 2.55 seconds (2.55s).
+[0m16:00:14.922514 [debug] [Dummy-1   ]: Command end result
+[0m16:00:14.945117 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m16:00:14.947027 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m16:00:14.953216 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m16:00:14.953725 [info ] [Dummy-1   ]: 
+[0m16:00:14.954357 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m16:00:14.954817 [info ] [Dummy-1   ]: 
+[0m16:00:14.955286 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:00:14.956910 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.9436035, "process_in_blocks": "0", "process_kernel_time": 0.73, "process_mem_max_rss": "456304", "process_out_blocks": "0", "process_user_time": 4.21}
+[0m16:00:14.957568 [debug] [Dummy-1   ]: Command `cli run` succeeded at 16:00:14.957306 after 3.94 seconds
+[0m16:00:14.958145 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 16:04:42.291643 | 26a870e8-f619-4010-b2e4-2be31aa6a1dc ==============================
+[0m16:04:42.291643 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m16:04:42.292481 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m16:04:42.564818 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m16:04:43.117203 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m16:04:43.248312 [info ] [Dummy-1   ]: Unable to do partial parsing because a project config has changed
+[0m16:04:44.769622 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m16:04:44.771380 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m16:04:44.808416 [info ] [Dummy-1   ]: Found 3 models, 7 data tests, 4 sources, 474 macros
+[0m16:04:44.810513 [info ] [Dummy-1   ]: 
+[0m16:04:44.811030 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m16:04:44.811487 [info ] [Dummy-1   ]: 
+[0m16:04:44.812215 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m16:04:44.817546 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BARCLAYS_DEMO'
+[0m16:04:44.961861 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO"
+[0m16:04:44.962419 [debug] [ThreadPool]: On list_BARCLAYS_DEMO: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO"} */
+show terse schemas in database BARCLAYS_DEMO
+    limit 10000
+[0m16:04:44.962861 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:04:45.299756 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.337 seconds
+[0m16:04:45.303301 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BARCLAYS_DEMO_ANALYTICS'
+[0m16:04:45.315468 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS"
+[0m16:04:45.315964 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m16:04:45.316383 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:04:45.568828 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.252 seconds
+[0m16:04:45.573192 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS"
+[0m16:04:45.573684 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS"} */
+show objects in BARCLAYS_DEMO.ANALYTICS
+    limit 10000
+    
+;
+[0m16:04:45.629493 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.055 seconds
+[0m16:04:45.631157 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS"
+[0m16:04:45.631633 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m16:04:45.723135 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.091 seconds
+[0m16:04:45.729335 [debug] [Thread-2 (]: Began running node model.barclays_payments.stg_payments
+[0m16:04:45.730096 [info ] [Thread-2 (]: 1 of 3 START sql view model ANALYTICS.stg_payments ............................. [RUN]
+[0m16:04:45.730760 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_BARCLAYS_DEMO_ANALYTICS, now model.barclays_payments.stg_payments)
+[0m16:04:45.731255 [debug] [Thread-2 (]: Began compiling node model.barclays_payments.stg_payments
+[0m16:04:45.739843 [debug] [Thread-2 (]: Writing injected SQL for node "model.barclays_payments.stg_payments"
+[0m16:04:45.740534 [debug] [Thread-2 (]: Began executing node model.barclays_payments.stg_payments
+[0m16:04:45.778681 [debug] [Thread-2 (]: Writing runtime sql for node "model.barclays_payments.stg_payments"
+[0m16:04:45.780194 [debug] [Thread-2 (]: Using snowflake connection "model.barclays_payments.stg_payments"
+[0m16:04:45.780766 [debug] [Thread-2 (]: On model.barclays_payments.stg_payments: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.stg_payments"} */
+create or replace   view BARCLAYS_DEMO.ANALYTICS.stg_payments
+  
+   as (
+    WITH source AS (
+    SELECT * FROM BARCLAYS_DEMO.RAW.payments
+)
+
+SELECT
+    PAYMENT_ID,
+    PAYMENT_DATE,
+    PAYMENT_DATE::DATE AS PAYMENT_DAY,
+    ORIGINATOR_NAME,
+    BENEFICIARY_NAME,
+    PAYMENT_TYPE,
+    CHANNEL,
+    CURRENCY,
+    AMOUNT,
+    CASE
+        WHEN AMOUNT < 5000 THEN 'RETAIL'
+        WHEN AMOUNT < 100000 THEN 'CORPORATE'
+        ELSE 'LARGE VALUE'
+    END AS VALUE_BAND,
+    STATUS,
+    PROCESSING_TIME_MS,
+    ERROR_CODE,
+    REGION
+FROM source
+WHERE PAYMENT_ID IS NOT NULL
+  );
+[0m16:04:45.781264 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:04:46.232396 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.451 seconds
+[0m16:04:46.255768 [info ] [Thread-2 (]: 1 of 3 OK created sql view model ANALYTICS.stg_payments ........................ [[32mSUCCESS 1[0m in 0.52s]
+[0m16:04:46.256576 [debug] [Thread-2 (]: Finished running node model.barclays_payments.stg_payments
+[0m16:04:46.257846 [debug] [Thread-4 (]: Began running node model.barclays_payments.mart_payment_kpis
+[0m16:04:46.258679 [info ] [Thread-4 (]: 2 of 3 START sql table model ANALYTICS.mart_payment_kpis ....................... [RUN]
+[0m16:04:46.259379 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.barclays_payments.mart_payment_kpis'
+[0m16:04:46.259850 [debug] [Thread-4 (]: Began compiling node model.barclays_payments.mart_payment_kpis
+[0m16:04:46.264035 [debug] [Thread-4 (]: Writing injected SQL for node "model.barclays_payments.mart_payment_kpis"
+[0m16:04:46.264734 [debug] [Thread-4 (]: Began executing node model.barclays_payments.mart_payment_kpis
+[0m16:04:46.289218 [debug] [Thread-4 (]: Writing runtime sql for node "model.barclays_payments.mart_payment_kpis"
+[0m16:04:46.290750 [debug] [Thread-4 (]: Using snowflake connection "model.barclays_payments.mart_payment_kpis"
+[0m16:04:46.291336 [debug] [Thread-4 (]: On model.barclays_payments.mart_payment_kpis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.mart_payment_kpis"} */
+create or replace transient table BARCLAYS_DEMO.ANALYTICS.mart_payment_kpis
+         as
+        (WITH payments AS (
+    SELECT * FROM BARCLAYS_DEMO.ANALYTICS.stg_payments
+)
+
+SELECT
+    PAYMENT_DAY AS PAYMENT_DATE,
+    PAYMENT_TYPE,
+    REGION,
+    COUNT(*) AS TOTAL_PAYMENTS,
+    SUM(AMOUNT) AS TOTAL_VOLUME,
+    ROUND(100.0 * COUNT(CASE WHEN STATUS = 'COMPLETED' THEN 1 END) / COUNT(*), 2) AS SUCCESS_RATE_PCT,
+    ROUND(AVG(PROCESSING_TIME_MS), 0) AS AVG_PROCESSING_TIME_MS,
+    PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY PROCESSING_TIME_MS) AS P95_PROCESSING_TIME_MS
+FROM payments
+GROUP BY PAYMENT_DAY, PAYMENT_TYPE, REGION
+        );
+[0m16:04:46.291869 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:04:47.326286 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.034 seconds
+[0m16:04:47.329223 [info ] [Thread-4 (]: 2 of 3 OK created sql table model ANALYTICS.mart_payment_kpis .................. [[32mSUCCESS 1[0m in 1.07s]
+[0m16:04:47.329960 [debug] [Thread-4 (]: Finished running node model.barclays_payments.mart_payment_kpis
+[0m16:04:47.331082 [debug] [Thread-3 (]: Began running node model.barclays_payments.mart_sla_compliance
+[0m16:04:47.331881 [info ] [Thread-3 (]: 3 of 3 START sql table model ANALYTICS.mart_sla_compliance ..................... [RUN]
+[0m16:04:47.332512 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_BARCLAYS_DEMO, now model.barclays_payments.mart_sla_compliance)
+[0m16:04:47.332995 [debug] [Thread-3 (]: Began compiling node model.barclays_payments.mart_sla_compliance
+[0m16:04:47.339140 [debug] [Thread-3 (]: Writing injected SQL for node "model.barclays_payments.mart_sla_compliance"
+[0m16:04:47.339870 [debug] [Thread-3 (]: Began executing node model.barclays_payments.mart_sla_compliance
+[0m16:04:47.343632 [debug] [Thread-3 (]: Writing runtime sql for node "model.barclays_payments.mart_sla_compliance"
+[0m16:04:47.345346 [debug] [Thread-3 (]: Using snowflake connection "model.barclays_payments.mart_sla_compliance"
+[0m16:04:47.345902 [debug] [Thread-3 (]: On model.barclays_payments.mart_sla_compliance: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.mart_sla_compliance"} */
+create or replace transient table BARCLAYS_DEMO.ANALYTICS.mart_sla_compliance
+         as
+        (WITH kpis AS (
+    SELECT * FROM BARCLAYS_DEMO.ANALYTICS.mart_payment_kpis
+),
+
+sla AS (
+    SELECT * FROM BARCLAYS_DEMO.RAW.sla_definitions
+)
+
+SELECT
+    k.PAYMENT_DATE,
+    k.PAYMENT_TYPE,
+    k.REGION,
+    k.TOTAL_PAYMENTS,
+    k.TOTAL_VOLUME,
+    k.SUCCESS_RATE_PCT,
+    k.AVG_PROCESSING_TIME_MS,
+    s.SLA_NAME,
+    s.TARGET_SUCCESS_RATE,
+    s.MAX_PROCESSING_TIME_MS AS SLA_MAX_TIME_MS,
+    CASE
+        WHEN k.SUCCESS_RATE_PCT >= s.TARGET_SUCCESS_RATE
+             AND k.AVG_PROCESSING_TIME_MS <= s.MAX_PROCESSING_TIME_MS THEN 'COMPLIANT'
+        WHEN k.SUCCESS_RATE_PCT >= (s.TARGET_SUCCESS_RATE - 1.0)
+             AND k.AVG_PROCESSING_TIME_MS <= (s.MAX_PROCESSING_TIME_MS * 1.2) THEN 'AT RISK'
+        ELSE 'BREACH'
+    END AS SLA_STATUS
+FROM kpis k
+INNER JOIN sla s ON k.PAYMENT_TYPE = s.PAYMENT_TYPE
+        );
+[0m16:04:47.346412 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:04:48.202286 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.856 seconds
+[0m16:04:48.205258 [info ] [Thread-3 (]: 3 of 3 OK created sql table model ANALYTICS.mart_sla_compliance ................ [[32mSUCCESS 1[0m in 0.87s]
+[0m16:04:48.205977 [debug] [Thread-3 (]: Finished running node model.barclays_payments.mart_sla_compliance
+[0m16:04:48.208654 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m16:04:48.209243 [debug] [Dummy-1   ]: Connection 'model.barclays_payments.mart_sla_compliance' was properly closed.
+[0m16:04:48.209656 [debug] [Dummy-1   ]: Connection 'model.barclays_payments.stg_payments' was properly closed.
+[0m16:04:48.210039 [debug] [Dummy-1   ]: Connection 'model.barclays_payments.mart_payment_kpis' was properly closed.
+[0m16:04:48.210535 [info ] [Dummy-1   ]: 
+[0m16:04:48.210973 [info ] [Dummy-1   ]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 3.40 seconds (3.40s).
+[0m16:04:48.211961 [debug] [Dummy-1   ]: Command end result
+[0m16:04:48.235037 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m16:04:48.236703 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m16:04:48.242420 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m16:04:48.242869 [info ] [Dummy-1   ]: 
+[0m16:04:48.243467 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m16:04:48.243927 [info ] [Dummy-1   ]: 
+[0m16:04:48.244418 [info ] [Dummy-1   ]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m16:04:48.246038 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.026062, "process_in_blocks": "0", "process_kernel_time": 0.75, "process_mem_max_rss": "511688", "process_out_blocks": "0", "process_user_time": 5.29}
+[0m16:04:48.246656 [debug] [Dummy-1   ]: Command `cli run` succeeded at 16:04:48.246400 after 6.03 seconds
+[0m16:04:48.247164 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 16:41:03.017623 | 3405c6f9-253f-4240-82f0-7577a8b38d83 ==============================
+[0m16:41:03.017623 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m16:41:03.018497 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m16:41:03.289388 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m16:41:03.850734 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m16:41:04.040432 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:41:04.040977 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:41:04.224046 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m16:41:04.225903 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m16:41:04.283864 [info ] [Dummy-1   ]: Found 3 models, 7 data tests, 4 sources, 474 macros
+[0m16:41:04.286568 [info ] [Dummy-1   ]: 
+[0m16:41:04.287052 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m16:41:04.287484 [info ] [Dummy-1   ]: 
+[0m16:41:04.288180 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m16:41:04.293469 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BARCLAYS_DEMO'
+[0m16:41:04.395647 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO"
+[0m16:41:04.396207 [debug] [ThreadPool]: On list_BARCLAYS_DEMO: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO"} */
+show terse schemas in database BARCLAYS_DEMO
+    limit 10000
+[0m16:41:04.396668 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:41:04.935559 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.539 seconds
+[0m16:41:04.939024 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BARCLAYS_DEMO_ANALYTICS'
+[0m16:41:04.951157 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS"
+[0m16:41:04.951632 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m16:41:04.952042 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:41:05.330979 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.379 seconds
+[0m16:41:05.335038 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS"
+[0m16:41:05.335505 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS"} */
+show objects in BARCLAYS_DEMO.ANALYTICS
+    limit 10000
+    
+;
+[0m16:41:05.421483 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.085 seconds
+[0m16:41:05.423171 [debug] [ThreadPool]: Using snowflake connection "list_BARCLAYS_DEMO_ANALYTICS"
+[0m16:41:05.423607 [debug] [ThreadPool]: On list_BARCLAYS_DEMO_ANALYTICS: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "connection_name": "list_BARCLAYS_DEMO_ANALYTICS"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m16:41:05.476559 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.052 seconds
+[0m16:41:05.482874 [debug] [Thread-2 (]: Began running node model.barclays_payments.stg_payments
+[0m16:41:05.483595 [info ] [Thread-2 (]: 1 of 10 START sql view model ANALYTICS.stg_payments ............................ [RUN]
+[0m16:41:05.484528 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_BARCLAYS_DEMO_ANALYTICS, now model.barclays_payments.stg_payments)
+[0m16:41:05.485126 [debug] [Thread-2 (]: Began compiling node model.barclays_payments.stg_payments
+[0m16:41:05.494169 [debug] [Thread-2 (]: Writing injected SQL for node "model.barclays_payments.stg_payments"
+[0m16:41:05.494869 [debug] [Thread-2 (]: Began executing node model.barclays_payments.stg_payments
+[0m16:41:05.531506 [debug] [Thread-2 (]: Writing runtime sql for node "model.barclays_payments.stg_payments"
+[0m16:41:05.532853 [debug] [Thread-2 (]: Using snowflake connection "model.barclays_payments.stg_payments"
+[0m16:41:05.533391 [debug] [Thread-2 (]: On model.barclays_payments.stg_payments: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.stg_payments"} */
+create or replace   view BARCLAYS_DEMO.ANALYTICS.stg_payments
+  
+   as (
+    WITH source AS (
+    SELECT * FROM BARCLAYS_DEMO.RAW.payments
+)
+
+SELECT
+    PAYMENT_ID,
+    PAYMENT_DATE,
+    PAYMENT_DATE::DATE AS PAYMENT_DAY,
+    ORIGINATOR_NAME,
+    BENEFICIARY_NAME,
+    PAYMENT_TYPE,
+    CHANNEL,
+    CURRENCY,
+    AMOUNT,
+    CASE
+        WHEN AMOUNT < 5000 THEN 'RETAIL'
+        WHEN AMOUNT < 100000 THEN 'CORPORATE'
+        ELSE 'LARGE VALUE'
+    END AS VALUE_BAND,
+    STATUS,
+    PROCESSING_TIME_MS,
+    ERROR_CODE,
+    REGION
+FROM source
+WHERE PAYMENT_ID IS NOT NULL
+  );
+[0m16:41:05.533949 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:41:06.080010 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.546 seconds
+[0m16:41:06.102694 [info ] [Thread-2 (]: 1 of 10 OK created sql view model ANALYTICS.stg_payments ....................... [[32mSUCCESS 1[0m in 0.62s]
+[0m16:41:06.103433 [debug] [Thread-2 (]: Finished running node model.barclays_payments.stg_payments
+[0m16:41:06.104757 [debug] [Thread-4 (]: Began running node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72
+[0m16:41:06.105353 [debug] [Thread-5 (]: Began running node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m16:41:06.105973 [debug] [Thread-3 (]: Began running node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m16:41:06.106525 [debug] [Thread-2 (]: Began running node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m16:41:06.107020 [info ] [Thread-4 (]: 2 of 10 START test accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED  [RUN]
+[0m16:41:06.107563 [info ] [Thread-5 (]: 3 of 10 START test not_null_stg_payments_PAYMENT_ID ............................ [RUN]
+[0m16:41:06.108066 [info ] [Thread-3 (]: 4 of 10 START test not_null_stg_payments_PAYMENT_TYPE .......................... [RUN]
+[0m16:41:06.108628 [info ] [Thread-2 (]: 5 of 10 START test unique_stg_payments_PAYMENT_ID .............................. [RUN]
+[0m16:41:06.109304 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72'
+[0m16:41:06.109904 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8'
+[0m16:41:06.110455 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_BARCLAYS_DEMO, now test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1)
+[0m16:41:06.111016 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.barclays_payments.stg_payments, now test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d)
+[0m16:41:06.111517 [debug] [Thread-4 (]: Began compiling node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72
+[0m16:41:06.111979 [debug] [Thread-5 (]: Began compiling node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m16:41:06.112435 [debug] [Thread-3 (]: Began compiling node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m16:41:06.112872 [debug] [Thread-2 (]: Began compiling node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m16:41:06.128145 [debug] [Thread-4 (]: Writing injected SQL for node "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72"
+[0m16:41:06.137932 [debug] [Thread-5 (]: Writing injected SQL for node "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"
+[0m16:41:06.144414 [debug] [Thread-3 (]: Writing injected SQL for node "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"
+[0m16:41:06.151556 [debug] [Thread-2 (]: Writing injected SQL for node "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"
+[0m16:41:06.152542 [debug] [Thread-4 (]: Began executing node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72
+[0m16:41:06.153339 [debug] [Thread-5 (]: Began executing node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m16:41:06.154092 [debug] [Thread-3 (]: Began executing node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m16:41:06.171323 [debug] [Thread-4 (]: Writing runtime sql for node "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72"
+[0m16:41:06.171795 [debug] [Thread-2 (]: Began executing node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m16:41:06.175260 [debug] [Thread-5 (]: Writing runtime sql for node "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"
+[0m16:41:06.179871 [debug] [Thread-3 (]: Writing runtime sql for node "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"
+[0m16:41:06.183368 [debug] [Thread-2 (]: Writing runtime sql for node "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"
+[0m16:41:06.184480 [debug] [Thread-4 (]: Using snowflake connection "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72"
+[0m16:41:06.185550 [debug] [Thread-5 (]: Using snowflake connection "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"
+[0m16:41:06.186729 [debug] [Thread-3 (]: Using snowflake connection "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"
+[0m16:41:06.187391 [debug] [Thread-4 (]: On test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        STATUS as value_field,
+        count(*) as n_records
+
+    from BARCLAYS_DEMO.ANALYTICS.stg_payments
+    group by STATUS
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'COMPLETED','PENDING','FAILED','RETURNED','CANCELLED'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m16:41:06.188400 [debug] [Thread-2 (]: Using snowflake connection "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"
+[0m16:41:06.188938 [debug] [Thread-5 (]: On test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select PAYMENT_ID
+from BARCLAYS_DEMO.ANALYTICS.stg_payments
+where PAYMENT_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:41:06.189592 [debug] [Thread-3 (]: On test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select PAYMENT_TYPE
+from BARCLAYS_DEMO.ANALYTICS.stg_payments
+where PAYMENT_TYPE is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:41:06.190167 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:41:06.190696 [debug] [Thread-2 (]: On test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    PAYMENT_ID as unique_field,
+    count(*) as n_records
+
+from BARCLAYS_DEMO.ANALYTICS.stg_payments
+where PAYMENT_ID is not null
+group by PAYMENT_ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m16:41:06.191185 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m16:41:06.191641 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:41:06.192301 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:41:06.771171 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.580 seconds
+[0m16:41:06.775469 [info ] [Thread-5 (]: 3 of 10 PASS not_null_stg_payments_PAYMENT_ID .................................. [[32mPASS[0m in 0.67s]
+[0m16:41:06.776224 [debug] [Thread-5 (]: Finished running node test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8
+[0m16:41:06.867053 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.675 seconds
+[0m16:41:06.869341 [info ] [Thread-3 (]: 4 of 10 PASS not_null_stg_payments_PAYMENT_TYPE ................................ [[32mPASS[0m in 0.76s]
+[0m16:41:06.870034 [debug] [Thread-3 (]: Finished running node test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1
+[0m16:41:06.955425 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.765 seconds
+[0m16:41:06.957413 [info ] [Thread-4 (]: 2 of 10 PASS accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED  [[32mPASS[0m in 0.85s]
+[0m16:41:06.958108 [debug] [Thread-4 (]: Finished running node test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72
+[0m16:41:06.974032 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.782 seconds
+[0m16:41:06.975952 [info ] [Thread-2 (]: 5 of 10 PASS unique_stg_payments_PAYMENT_ID .................................... [[32mPASS[0m in 0.86s]
+[0m16:41:06.976621 [debug] [Thread-2 (]: Finished running node test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d
+[0m16:41:06.977558 [debug] [Thread-5 (]: Began running node model.barclays_payments.mart_payment_kpis
+[0m16:41:06.978374 [info ] [Thread-5 (]: 6 of 10 START sql table model ANALYTICS.mart_payment_kpis ...................... [RUN]
+[0m16:41:06.978999 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.barclays_payments.not_null_stg_payments_PAYMENT_ID.fd53911ea8, now model.barclays_payments.mart_payment_kpis)
+[0m16:41:06.979475 [debug] [Thread-5 (]: Began compiling node model.barclays_payments.mart_payment_kpis
+[0m16:41:06.983636 [debug] [Thread-5 (]: Writing injected SQL for node "model.barclays_payments.mart_payment_kpis"
+[0m16:41:06.984304 [debug] [Thread-5 (]: Began executing node model.barclays_payments.mart_payment_kpis
+[0m16:41:07.008512 [debug] [Thread-5 (]: Writing runtime sql for node "model.barclays_payments.mart_payment_kpis"
+[0m16:41:07.009951 [debug] [Thread-5 (]: Using snowflake connection "model.barclays_payments.mart_payment_kpis"
+[0m16:41:07.010464 [debug] [Thread-5 (]: On model.barclays_payments.mart_payment_kpis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.mart_payment_kpis"} */
+create or replace transient table BARCLAYS_DEMO.ANALYTICS.mart_payment_kpis
+         as
+        (WITH payments AS (
+    SELECT * FROM BARCLAYS_DEMO.ANALYTICS.stg_payments
+)
+
+SELECT
+    PAYMENT_DAY AS PAYMENT_DATE,
+    PAYMENT_TYPE,
+    REGION,
+    COUNT(*) AS TOTAL_PAYMENTS,
+    SUM(AMOUNT) AS TOTAL_VOLUME,
+    ROUND(100.0 * COUNT(CASE WHEN STATUS = 'COMPLETED' THEN 1 END) / COUNT(*), 2) AS SUCCESS_RATE_PCT,
+    ROUND(AVG(PROCESSING_TIME_MS), 0) AS AVG_PROCESSING_TIME_MS,
+    PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY PROCESSING_TIME_MS) AS P95_PROCESSING_TIME_MS
+FROM payments
+GROUP BY PAYMENT_DAY, PAYMENT_TYPE, REGION
+        );
+[0m16:41:07.010923 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m16:41:08.045396 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.034 seconds
+[0m16:41:08.048147 [info ] [Thread-5 (]: 6 of 10 OK created sql table model ANALYTICS.mart_payment_kpis ................. [[32mSUCCESS 1[0m in 1.07s]
+[0m16:41:08.048947 [debug] [Thread-5 (]: Finished running node model.barclays_payments.mart_payment_kpis
+[0m16:41:08.050000 [debug] [Thread-4 (]: Began running node test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422
+[0m16:41:08.050547 [debug] [Thread-2 (]: Began running node test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092
+[0m16:41:08.051218 [info ] [Thread-4 (]: 7 of 10 START test not_null_mart_payment_kpis_PAYMENT_DATE ..................... [RUN]
+[0m16:41:08.051793 [info ] [Thread-2 (]: 8 of 10 START test not_null_mart_payment_kpis_TOTAL_PAYMENTS ................... [RUN]
+[0m16:41:08.052384 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.barclays_payments.accepted_values_stg_payments_STATUS__COMPLETED__PENDING__FAILED__RETURNED__CANCELLED.a7e81e9f72, now test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422)
+[0m16:41:08.053174 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.barclays_payments.unique_stg_payments_PAYMENT_ID.c466e5f01d, now test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092)
+[0m16:41:08.053725 [debug] [Thread-4 (]: Began compiling node test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422
+[0m16:41:08.054221 [debug] [Thread-2 (]: Began compiling node test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092
+[0m16:41:08.061219 [debug] [Thread-4 (]: Writing injected SQL for node "test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422"
+[0m16:41:08.066111 [debug] [Thread-2 (]: Writing injected SQL for node "test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092"
+[0m16:41:08.066941 [debug] [Thread-4 (]: Began executing node test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422
+[0m16:41:08.070615 [debug] [Thread-4 (]: Writing runtime sql for node "test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422"
+[0m16:41:08.071147 [debug] [Thread-2 (]: Began executing node test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092
+[0m16:41:08.074830 [debug] [Thread-2 (]: Writing runtime sql for node "test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092"
+[0m16:41:08.075736 [debug] [Thread-4 (]: Using snowflake connection "test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422"
+[0m16:41:08.076500 [debug] [Thread-4 (]: On test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select PAYMENT_DATE
+from BARCLAYS_DEMO.ANALYTICS.mart_payment_kpis
+where PAYMENT_DATE is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:41:08.077354 [debug] [Thread-2 (]: Using snowflake connection "test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092"
+[0m16:41:08.077832 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:41:08.078376 [debug] [Thread-2 (]: On test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select TOTAL_PAYMENTS
+from BARCLAYS_DEMO.ANALYTICS.mart_payment_kpis
+where TOTAL_PAYMENTS is null
+
+
+
+      
+    ) dbt_internal_test
+[0m16:41:08.078995 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:41:08.562549 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.485 seconds
+[0m16:41:08.563279 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.484 seconds
+[0m16:41:08.565614 [info ] [Thread-4 (]: 7 of 10 PASS not_null_mart_payment_kpis_PAYMENT_DATE ........................... [[32mPASS[0m in 0.51s]
+[0m16:41:08.567574 [info ] [Thread-2 (]: 8 of 10 PASS not_null_mart_payment_kpis_TOTAL_PAYMENTS ......................... [[32mPASS[0m in 0.51s]
+[0m16:41:08.568404 [debug] [Thread-4 (]: Finished running node test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422
+[0m16:41:08.569063 [debug] [Thread-2 (]: Finished running node test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092
+[0m16:41:08.570252 [debug] [Thread-5 (]: Began running node model.barclays_payments.mart_sla_compliance
+[0m16:41:08.571153 [info ] [Thread-5 (]: 9 of 10 START sql table model ANALYTICS.mart_sla_compliance .................... [RUN]
+[0m16:41:08.571752 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.barclays_payments.mart_payment_kpis, now model.barclays_payments.mart_sla_compliance)
+[0m16:41:08.572212 [debug] [Thread-5 (]: Began compiling node model.barclays_payments.mart_sla_compliance
+[0m16:41:08.576829 [debug] [Thread-5 (]: Writing injected SQL for node "model.barclays_payments.mart_sla_compliance"
+[0m16:41:08.577480 [debug] [Thread-5 (]: Began executing node model.barclays_payments.mart_sla_compliance
+[0m16:41:08.583054 [debug] [Thread-5 (]: Writing runtime sql for node "model.barclays_payments.mart_sla_compliance"
+[0m16:41:08.584758 [debug] [Thread-5 (]: Using snowflake connection "model.barclays_payments.mart_sla_compliance"
+[0m16:41:08.585326 [debug] [Thread-5 (]: On model.barclays_payments.mart_sla_compliance: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "model.barclays_payments.mart_sla_compliance"} */
+create or replace transient table BARCLAYS_DEMO.ANALYTICS.mart_sla_compliance
+         as
+        (WITH kpis AS (
+    SELECT * FROM BARCLAYS_DEMO.ANALYTICS.mart_payment_kpis
+),
+
+sla AS (
+    SELECT * FROM BARCLAYS_DEMO.RAW.sla_definitions
+)
+
+SELECT
+    k.PAYMENT_DATE,
+    k.PAYMENT_TYPE,
+    k.REGION,
+    k.TOTAL_PAYMENTS,
+    k.TOTAL_VOLUME,
+    k.SUCCESS_RATE_PCT,
+    k.AVG_PROCESSING_TIME_MS,
+    s.SLA_NAME,
+    s.TARGET_SUCCESS_RATE,
+    s.MAX_PROCESSING_TIME_MS AS SLA_MAX_TIME_MS,
+    CASE
+        WHEN k.SUCCESS_RATE_PCT >= s.TARGET_SUCCESS_RATE
+             AND k.AVG_PROCESSING_TIME_MS <= s.MAX_PROCESSING_TIME_MS THEN 'COMPLIANT'
+        WHEN k.SUCCESS_RATE_PCT >= (s.TARGET_SUCCESS_RATE - 1.0)
+             AND k.AVG_PROCESSING_TIME_MS <= (s.MAX_PROCESSING_TIME_MS * 1.2) THEN 'AT RISK'
+        ELSE 'BREACH'
+    END AS SLA_STATUS
+FROM kpis k
+INNER JOIN sla s ON k.PAYMENT_TYPE = s.PAYMENT_TYPE
+        );
+[0m16:41:08.585806 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m16:41:09.703879 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.118 seconds
+[0m16:41:09.706601 [info ] [Thread-5 (]: 9 of 10 OK created sql table model ANALYTICS.mart_sla_compliance ............... [[32mSUCCESS 1[0m in 1.13s]
+[0m16:41:09.707296 [debug] [Thread-5 (]: Finished running node model.barclays_payments.mart_sla_compliance
+[0m16:41:09.708441 [debug] [Thread-4 (]: Began running node test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337
+[0m16:41:09.709144 [info ] [Thread-4 (]: 10 of 10 START test accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH  [RUN]
+[0m16:41:09.709795 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.barclays_payments.not_null_mart_payment_kpis_PAYMENT_DATE.6eb4fba422, now test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337)
+[0m16:41:09.710277 [debug] [Thread-4 (]: Began compiling node test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337
+[0m16:41:09.717706 [debug] [Thread-4 (]: Writing injected SQL for node "test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337"
+[0m16:41:09.718486 [debug] [Thread-4 (]: Began executing node test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337
+[0m16:41:09.721991 [debug] [Thread-4 (]: Writing runtime sql for node "test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337"
+[0m16:41:09.723174 [debug] [Thread-4 (]: Using snowflake connection "test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337"
+[0m16:41:09.723692 [debug] [Thread-4 (]: On test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "barclays_payments", "target_name": "dev", "node_id": "test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        SLA_STATUS as value_field,
+        count(*) as n_records
+
+    from BARCLAYS_DEMO.ANALYTICS.mart_sla_compliance
+    group by SLA_STATUS
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'COMPLIANT','AT RISK','BREACH'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m16:41:09.724159 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:41:10.288004 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.564 seconds
+[0m16:41:10.290240 [info ] [Thread-4 (]: 10 of 10 PASS accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH  [[32mPASS[0m in 0.58s]
+[0m16:41:10.290912 [debug] [Thread-4 (]: Finished running node test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337
+[0m16:41:10.294138 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m16:41:10.294904 [debug] [Dummy-1   ]: Connection 'test.barclays_payments.not_null_stg_payments_PAYMENT_TYPE.d5272fdeb1' was properly closed.
+[0m16:41:10.295389 [debug] [Dummy-1   ]: Connection 'test.barclays_payments.not_null_mart_payment_kpis_TOTAL_PAYMENTS.cf8d5e4092' was properly closed.
+[0m16:41:10.295817 [debug] [Dummy-1   ]: Connection 'test.barclays_payments.accepted_values_mart_sla_compliance_SLA_STATUS__COMPLIANT__AT_RISK__BREACH.ad73a44337' was properly closed.
+[0m16:41:10.296219 [debug] [Dummy-1   ]: Connection 'model.barclays_payments.mart_sla_compliance' was properly closed.
+[0m16:41:10.296730 [info ] [Dummy-1   ]: 
+[0m16:41:10.297173 [info ] [Dummy-1   ]: Finished running 2 table models, 7 data tests, 1 view model in 0 hours 0 minutes and 6.01 seconds (6.01s).
+[0m16:41:10.299016 [debug] [Dummy-1   ]: Command end result
+[0m16:41:10.322249 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m16:41:10.323959 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m16:41:10.330168 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m16:41:10.330609 [info ] [Dummy-1   ]: 
+[0m16:41:10.331154 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m16:41:10.331593 [info ] [Dummy-1   ]: 
+[0m16:41:10.332060 [info ] [Dummy-1   ]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 TOTAL=10
+[0m16:41:10.333686 [debug] [Dummy-1   ]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 7.3883905, "process_in_blocks": "0", "process_kernel_time": 0.84, "process_mem_max_rss": "467380", "process_out_blocks": "0", "process_user_time": 4.32}
+[0m16:41:10.334281 [debug] [Dummy-1   ]: Command `cli build` succeeded at 16:41:10.334039 after 7.39 seconds
+[0m16:41:10.334754 [debug] [Dummy-1   ]: Flushing usage events
